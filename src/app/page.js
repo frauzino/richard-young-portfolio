@@ -1,7 +1,11 @@
+'use client'
+
 import styles from './home_page.module.scss'
 import { Banner } from './components/banner'
 import { Navbar } from './components/navbar'
 import { Section } from './components/section'
+import { Button } from './components/button'
+import { SlideshowCard } from './components/slideshow-card'
 
 export default function HomePage() {
   return (
@@ -39,12 +43,83 @@ export default function HomePage() {
           />
           <Section
             header={'Tech Stack'}
+            cardType='tech'
             cards={[
               {
                 title: 'Figma',
                 logo: '/figma_logo.png',
                 logoAlt: 'Figma Logo',
                 content: 'Some text about figma skills here'
+              },
+              {
+                title: 'Figma',
+                logo: '/figma_logo.png',
+                logoAlt: 'Figma Logo',
+                content: 'Some text about figma skills here'
+              },
+              {
+                title: 'Figma',
+                logo: '/figma_logo.png',
+                logoAlt: 'Figma Logo',
+                content: 'Some text about figma skills here'
+              },
+              {
+                title: 'Figma',
+                logo: '/figma_logo.png',
+                logoAlt: 'Figma Logo',
+                content: 'Some text about figma skills here'
+              },
+              {
+                title: 'Figma',
+                logo: '/figma_logo.png',
+                logoAlt: 'Figma Logo',
+                content: 'Some text about figma skills here'
+              }
+            ]}
+          />
+          <Section
+            header="Projects"
+            cardType='project'
+            cards ={[
+              {
+                title: 'Cafe Pista',
+                subHeading: 'Liquid, Javascript',
+                textContent: <p>
+                  Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                  Aenean congue suscipit purus sit amet consequat. Nulla sollicitudin
+                  iaculis augue in tristique. Donec in lacinia augue. Orci varius natoque penatibus et
+                  magnis dis parturient montes, nascetur ridiculus mus. Integer in gravida erat.
+                </p>,
+                cardImage: '/pista_homepage.png',
+                cardImageAlt: 'Homepage for cafepista.com',
+                url: 'https://cafepista.com/'
+              },
+              {
+                title: 'Cafe Pista',
+                subHeading: 'Liquid, javascript',
+                textContent: '',
+                cardImage: '/pista_homepage.png',
+                cardImageAlt: 'Homepage for cafepista.com',
+                url: ''
+              }
+            ]}
+          />
+          <SlideshowCard
+            textContent={<p>
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+              Aenean congue suscipit purus sit amet consequat. Nulla sollicitudin
+              iaculis augue in tristique. Donec in lacinia augue. Orci varius natoque penatibus et
+              magnis dis parturient montes, nascetur ridiculus mus. Integer in gravida erat.
+            </p>}
+            url='https://cafepista.com/'
+            slideImages={[
+              {
+                image: '/pista_homepage.png',
+                imageAlt: 'cafepista.com homepage'
+              },
+              {
+                image: '/mtl_skyline.jpg',
+                imageAlt: 'Montreal skyline at sunrise'
               }
             ]}
           />

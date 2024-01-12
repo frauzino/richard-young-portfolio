@@ -11,8 +11,8 @@ export function Navbar(props) {
         <Link className={styles.navbar__header} href="/">{header}</Link>
       </div>
       <ul className={styles.navbar__nav_links}>
-        {navItems.map((item) => (
-          <li key={item.index} className={styles.nav_link}>
+        {navItems.map((item, index) => (
+          <li key={`navlink-${index}`} className={styles.nav_link}>
             <Link href="">{item}</Link>
           </li>
         ))}

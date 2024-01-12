@@ -1,6 +1,15 @@
 .card_block {
-  width: 100%;
+  padding: 0 2rem;
   display: flex;
-  flex-direction: column;
+  flex-wrap: wrap;
+  gap: 3rem;
+  width: 100%;
+}
+
+.between_just {
   justify-content: space-between;
+}
+
+.center_just {
+  justify-content: center;
 }

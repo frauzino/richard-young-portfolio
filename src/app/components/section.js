@@ -7,6 +7,7 @@ import { CardBlock } from "./card-block"
 export function Section(props) {
   const header = props.header
   const textContent = props.textContent
+  const cardType = props.cardType
   const cards = props.cards
 
   return (
@@ -19,6 +20,7 @@ export function Section(props) {
           textContent={textContent}
         />
         <CardBlock
+          cardType={cardType}
           cards={cards}
         />
       </div>

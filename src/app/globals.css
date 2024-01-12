@@ -19,9 +19,13 @@
 
   --dark-gray: #363635;
   --moss-green: #688D7D;
-  --shadow-gray: #b7b7b7;
+  --shadow-gray: #b0b0b0bf;
+  --light-gray: #b0b0b0a3;
+  --medium-gray: #888888a3;
 
-  --card-shadow: 4px 4px 5px var(--shadow-gray);
+  --card-shadow: 4px 4px 15px var(--shadow-gray);
+
+  --card-radius: 1rem;
 
 }
 

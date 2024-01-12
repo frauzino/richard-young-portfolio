@@ -1,0 +1,44 @@
+.slideshow {
+  position: relative;
+  height: 100%;
+}
+
+.slideImage {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+  border-radius: 1rem 1rem 0 0;
+  opacity: 0;
+  transition: opacity .6s;
+}
+
+.active {
+  opacity: 1;
+}
+
+.left_wrapper, .right_wrapper {
+  background: var(--light-gray);
+  width: fit-content;
+  position: absolute;
+  top: calc(50% - 2rem);
+  height: 4rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  &:hover {
+    background: var(--medium-gray)
+  }
+}
+
+.left_wrapper {
+  border-radius: 0 1rem 1rem 0;
+  left: 0;
+}
+
+.right_wrapper {
+  border-radius: 1rem 0 0 1rem;
+  right: 0;
+}

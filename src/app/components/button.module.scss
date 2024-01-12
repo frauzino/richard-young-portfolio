@@ -1,0 +1,15 @@
+.button {
+  border-radius: var(--card-radius);
+  border: 2px solid var(--moss-green);
+  background: var(--background-color);
+  text-align: center;
+  padding: .5rem 2rem;
+  transition: .25s;
+  color: var(--font-color-default);
+
+  &:hover {
+    cursor: pointer;
+    background: var(--moss-green);
+    color: var(--font-color-alt);
+  }
+}
