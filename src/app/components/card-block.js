@@ -33,6 +33,7 @@ export function CardBlock(props) {
               cardImage={card.cardImage}
               cardImageAlt={card.cardImageAlt}
               url={card.url}
+              slideImages={card.slideImages}
             />
           ))}
         </div>

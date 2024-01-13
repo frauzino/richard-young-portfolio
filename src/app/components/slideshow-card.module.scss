@@ -4,7 +4,8 @@
   display: flex;
   flex-direction: column;
   border-radius: var(--card-radius);
-  background-color: var(--background-color);
+  background-color: var(--background-color-alt);
+  color: var(--font-color-alt);
   box-shadow: var(--card-shadow);
 }
 

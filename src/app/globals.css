@@ -16,6 +16,7 @@
   --text-shadow-alt: 0px 0.4px 1px #fdf4edb9;
 
   --background-color: #fdf4ed;
+  --background-color-alt: #363635;
 
   --dark-gray: #363635;
   --moss-green: #688D7D;
@@ -54,4 +55,12 @@ h1, h2, h3, h4, h5, h6 {
 a {
   color: inherit;
   text-decoration: none;
+}
+
+.show {
+  display: block;
+}
+
+.hidden {
+  display: none;
 }
