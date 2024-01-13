@@ -92,7 +92,17 @@ export default function HomePage() {
                 </p>,
                 cardImage: '/pista_homepage.png',
                 cardImageAlt: 'Homepage for cafepista.com',
-                url: 'https://cafepista.com/'
+                url: 'https://cafepista.com/',
+                slideImages: [
+                  {
+                    image: '/pista_homepage.png',
+                    imageAlt: 'cafepista.com homepage'
+                  },
+                  {
+                    image: '/mtl_skyline.jpg',
+                    imageAlt: 'Montreal skyline at sunrise'
+                  }
+                ]
               },
               {
                 title: 'Cafe Pista',
@@ -104,7 +114,7 @@ export default function HomePage() {
               }
             ]}
           />
-          <SlideshowCard
+          {/* <SlideshowCard
             textContent={<p>
               Lorem ipsum dolor sit amet, consectetur adipiscing elit.
               Aenean congue suscipit purus sit amet consequat. Nulla sollicitudin
@@ -122,7 +132,7 @@ export default function HomePage() {
                 imageAlt: 'Montreal skyline at sunrise'
               }
             ]}
-          />
+          /> */}
         </div>
       </div>
     </div>

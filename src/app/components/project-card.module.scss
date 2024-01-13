@@ -78,6 +78,10 @@
 .card_title {
   position: absolute;
   font-size: 3rem;
+
+  &:hover {
+    cursor: pointer;
+  }
 }
 
 .card_subheading {
@@ -90,4 +94,24 @@
 .button-container {
   display: flex;
   width: 100%;
+}
+
+// Slideshow Card
+
+.slideshow_card_container {
+  position: fixed;
+  width: 70vw;
+  left: calc(30vw - 4%);
+  bottom: 4rem;
+  z-index: 2;
+}
+
+.blocker {
+  position: fixed;
+  opacity: 0;
+  width: 100vw;
+  height: 100vh;
+  top: 0;
+  left: 0;
+  z-index: 1;
 }

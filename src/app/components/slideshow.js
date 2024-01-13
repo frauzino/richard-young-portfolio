@@ -7,16 +7,13 @@ export function Slideshow(props) {
 
   const [currentIndex, setCurrentIndex] = useState(0);
   const nextSlide = () => {
-    const nextIndex = (currentIndex + 1) % slideImages.length;
-    setCurrentIndex(nextIndex);
+    const newIndex = (currentIndex + 1) % slideImages.length;
+    setCurrentIndex(newIndex);
   };
   const prevSlide = () => {
-    const nextIndex = (currentIndex - 1) % 0;
-    setCurrentIndex(nextIndex);
+    const newIndex = currentIndex > 0 ? (currentIndex - 1) : slideImages.length - 1;
+    setCurrentIndex(newIndex);
   };
-
-  console.log('index', currentIndex)
-
 
   return (
     <div className={styles.slideshow}>
