@@ -8,12 +8,12 @@ export function Navbar(props) {
   return (
     <div className={styles.navbar}>
       <div className={styles.navbar__header_wrapper}>
-        <Link className={styles.navbar__header} href="/">{header}</Link>
+        <Link className={styles.navbar__header} href="#banner">{header}</Link>
       </div>
       <ul className={styles.navbar__nav_links}>
         {navItems.map((item, index) => (
           <li key={`navlink-${index}`} className={styles.nav_link}>
-            <Link href="">{item}</Link>
+            <Link href={`#${item}`}>{item}</Link>
           </li>
         ))}
       </ul>

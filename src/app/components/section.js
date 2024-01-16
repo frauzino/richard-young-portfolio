@@ -12,6 +12,7 @@ export function Section(props) {
 
   return (
     <div className={styles.section_container}>
+      <a id={`${header}`} />
       <SectionHeader
         header={header}
       />

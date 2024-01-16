@@ -1,13 +1,13 @@
 import { Button } from './button'
+import { CloseElement } from './close-element'
 import { Slideshow } from './slideshow'
 import styles from './slideshow-card.module.scss'
 
-export function SlideshowCard(props) {
-  const slideImages = props.slideImages
-  const textContent = props.textContent
-  const url = props.url
+ export function SlideshowCard(props) {
+  const { slideImages, textContent, url, toggleCard } = props;
   return (
     <div className={styles.card}>
+      <CloseElement closeElement={toggleCard} />
       <div className={styles.slideshow_container}>
         <Slideshow
           slideImages={slideImages}
@@ -24,4 +24,4 @@ export function SlideshowCard(props) {
       </div>
     </div>
   )
-}
+ }

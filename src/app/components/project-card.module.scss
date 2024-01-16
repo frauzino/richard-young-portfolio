@@ -104,6 +104,12 @@
   left: calc(30vw - 4%);
   bottom: 4rem;
   z-index: 2;
+  transition: all .6s;
+  transform: translateY(115%);
+
+  :focus {
+    transform: translateY(0%);
+  }
 }
 
 .blocker {

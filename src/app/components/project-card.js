@@ -1,8 +1,9 @@
 import { useState } from 'react';
+import { useRef } from 'react';
 import { Button } from "./button"
 import Image from "next/image"
-import styles from "./project-card.module.scss"
-import { SlideshowCard } from "./slideshow-card"
+import styles from "./project-card.module.scss";
+import { SlideshowCard } from './slideshow-card';
 
 export function ProjectCard(props) {
   const title = props.title
@@ -16,24 +17,32 @@ export function ProjectCard(props) {
   // let showCard = false
   const [cardState, setCardState] = useState(false)
 
-  const showSlideshowCard = () => {
+  const openElement = () => {
     const showCard = true;
     setCardState(showCard);
   }
 
-  const hideSlideshowCard = () => {
+  const closeElement = () => {
     const showCard = false;
     setCardState(showCard);
   }
 
+  const toggleCard = () => {
+    setCardState(!cardState);
+  }
+
   return (
     <div>
-      <div className={`${styles.card_container}::before`} style={{width: '28rem'}}/>
+      <div
+        className={`${styles.card_container}::before`}
+        style={{width: '28rem'}}
+      />
       <div className={styles.card_container}>
         <div className={styles.card}>
           <div className={styles.card_front}>
             <Image
               className={styles.card_image}
+              loading='lazy'
               src={cardImage}
               alt={cardImageAlt}
               height={600}
@@ -41,22 +50,31 @@ export function ProjectCard(props) {
             />
           </div>
           <div className={styles.card_back}>
-            <h3 className={styles.card_title} onClick={showSlideshowCard}>{title}</h3>
+            <h3
+              className={styles.card_title}
+              onClick={openElement}
+            >
+              {title}
+            </h3>
             <p className={styles.card_subheading}>{subHeading}</p>
           </div>
         </div>
       </div>
 
-      <div className={`${styles.slideshow_card_container} ${cardState === true ? 'show' : 'hidden'}`}>
+      <div
+        className={`${styles.slideshow_card_container}`}
+        style={cardState === true ? {transform: 'translate(0%)'} : {}}
+      >
         <SlideshowCard
           slideImages={slideImages}
           textContent={textContent}
           url={url}
+          toggleCard={toggleCard}
         />
       </div>
       <div
         className={`${styles.blocker} ${cardState === true ? 'show' : 'hidden'}`}
-        onClick={hideSlideshowCard}
+        onClick={closeElement}
       />
     </div>
   )

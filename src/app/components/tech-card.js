@@ -15,6 +15,7 @@ export function TechCard(props) {
           <div className={styles.logo_background}>
             <Image
               className={styles.logo}
+              loading="lazy"
               src={cardLogo}
               alt={cardLogoAlt}
               height={600}

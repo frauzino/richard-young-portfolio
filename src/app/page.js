@@ -10,6 +10,7 @@ import { SlideshowCard } from './components/slideshow-card'
 export default function HomePage() {
   return (
     <div>
+      <a id="banner" className='smooth-scroll'/>
       <Banner
         header={'Richard Young'}
         content={'Full Stack Web Developer and Shopify Expert'}
@@ -17,7 +18,7 @@ export default function HomePage() {
       <div className={styles.master_container}>
         <Navbar
           header={'Richard Young'}
-          navItems={['About', 'Tech Stack', 'Projects', 'Contact']}
+          navItems={['About Me', 'Tech Stack', 'Projects', 'Contact']}
         />
         <div className={styles.main_content_container}>
           <Section
@@ -114,25 +115,6 @@ export default function HomePage() {
               }
             ]}
           />
-          {/* <SlideshowCard
-            textContent={<p>
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-              Aenean congue suscipit purus sit amet consequat. Nulla sollicitudin
-              iaculis augue in tristique. Donec in lacinia augue. Orci varius natoque penatibus et
-              magnis dis parturient montes, nascetur ridiculus mus. Integer in gravida erat.
-            </p>}
-            url='https://cafepista.com/'
-            slideImages={[
-              {
-                image: '/pista_homepage.png',
-                imageAlt: 'cafepista.com homepage'
-              },
-              {
-                image: '/mtl_skyline.jpg',
-                imageAlt: 'Montreal skyline at sunrise'
-              }
-            ]}
-          /> */}
         </div>
       </div>
     </div>

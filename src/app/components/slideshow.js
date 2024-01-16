@@ -21,6 +21,7 @@ export function Slideshow(props) {
         <Image
           key={`slide-${index}`}
           className={`${styles.slideImage} ${index === currentIndex ? `${styles.active}` : ''}`}
+          loading='lazy'
           src={slide.image}
           alt={slide.imageAlt}
           width={800}
@@ -30,6 +31,7 @@ export function Slideshow(props) {
       <div className={styles.left_wrapper} onClick={prevSlide}>
         <Image
           className={styles.left}
+          loading='lazy'
           src='/base_chevron_left.svg'
           alt="Left chevron"
           width={50}
@@ -39,6 +41,7 @@ export function Slideshow(props) {
       <div className={styles.right_wrapper} onClick={nextSlide}>
       <Image
           className={styles.left}
+          loading='lazy'
           src='/base_chevron_right.svg'
           alt="Right chevron"
           width={50}
