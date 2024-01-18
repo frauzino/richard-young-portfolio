@@ -39,10 +39,11 @@ export function TechCard(props) {
             <Image
               className={styles.logo}
               loading="lazy"
+              // priority={true}
               src={cardLogo}
               alt={cardLogoAlt}
-              height={600}
-              width={800}
+              height={120}
+              width={120}
             />
           </div>
         </div>

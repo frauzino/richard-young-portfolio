@@ -58,7 +58,7 @@ export default function HomePage() {
             cards={[
               {
                 title: 'Figma',
-                logo: '/figma_logo.png',
+                logo: '/figma_logo.webp',
                 logoAlt: 'Figma Logo',
                 content: 'Some text about figma skills here',
                 skillLevel: '30',
@@ -66,7 +66,7 @@ export default function HomePage() {
               },
               {
                 title: 'Javascript',
-                logo: '/javascript_logo.png',
+                logo: '/javascript_logo.webp',
                 logoAlt: 'Javascript Logo',
                 content: 'Some text about figma skills here',
                 skillLevel: 50,
@@ -74,7 +74,7 @@ export default function HomePage() {
               },
               {
                 title: 'React',
-                logo: '/react_logo.png',
+                logo: '/react_logo.webp',
                 logoAlt: 'React Logo',
                 content: 'Some text about figma skills here',
                 skillLevel: 25,
@@ -82,7 +82,7 @@ export default function HomePage() {
               },
               {
                 title: 'Ruby on Rails',
-                logo: '/ruby_on_rails_logo.png',
+                logo: '/ruby_on_rails_logo.webp',
                 logoAlt: 'Figma Logo',
                 content: 'Some text about figma skills here',
                 skillLevel: 65,
@@ -90,7 +90,7 @@ export default function HomePage() {
               },
               {
                 title: 'Shopify',
-                logo: '/shopify_logo.png',
+                logo: '/shopify_logo.webp',
                 logoAlt: 'Shopify Logo',
                 content: 'Some text about figma skills here',
                 skillLevel: 70,
@@ -98,7 +98,7 @@ export default function HomePage() {
               },
               {
                 title: 'Python',
-                logo: '/python_logo.png',
+                logo: '/python_logo.webp',
                 logoAlt: 'Python Logo',
                 content: 'Some text about figma skills here',
                 skillLevel: 10,
@@ -106,7 +106,7 @@ export default function HomePage() {
               },
               {
                 title: 'Django',
-                logo: '/django_logo.png',
+                logo: '/django_logo.webp',
                 logoAlt: 'Django Logo',
                 content: 'Some text about figma skills here',
                 skillLevel: 5,
@@ -114,7 +114,7 @@ export default function HomePage() {
               },
               {
                 title: 'CSS',
-                logo: '/css3_logo.png',
+                logo: '/css3_logo.webp',
                 logoAlt: 'CSS3 Logo',
                 content: 'Some text about figma skills here',
                 skillLevel: 75,
@@ -148,32 +148,32 @@ export default function HomePage() {
                   of this project revolved around integrating these apps, other challenges were in responsive styling, and conditional
                   styling, dependant on collection and product.
                 </p>,
-                cardImage: '/pista_screenshot_1.png',
+                cardImage: '/pista_screenshot_1.webp',
                 cardImageAlt: 'Homepage for cafepista.com',
                 url: 'https://cafepista.com/',
                 slideImages: [
                   {
-                    image: '/pista_screenshot_1.png',
+                    image: '/pista_screenshot_1.webp',
                     imageAlt: 'cafepista.com homepage'
                   },
                   {
-                    image: '/pista_screenshot_2.png',
+                    image: '/pista_screenshot_2.webp',
                     imageAlt: 'Screenshot of coffee collection from cafepista.com'
                   },
                   {
-                    image: '/pista_screenshot_3.png',
+                    image: '/pista_screenshot_3.webp',
                     imageAlt: 'Screenshot of coffee product page from cafepista.com'
                   },
                   {
-                    image: '/pista_screenshot_4.png',
+                    image: '/pista_screenshot_4.webp',
                     imageAlt: 'Screenshot of "our spaces" page from cafepista.com'
                   },
                   {
-                    image: '/pista_screenshot_5.png',
+                    image: '/pista_screenshot_5.webp',
                     imageAlt: 'Screenshot of "our story" page from cafepista.com'
                   },
                   {
-                    image: '/pista_screenshot_6.png',
+                    image: '/pista_screenshot_6.webp',
                     imageAlt: 'Screenshot of iced coffee collection from cafepista.com'
                   }
                 ]
@@ -190,28 +190,28 @@ export default function HomePage() {
                   accessible and usable. Future goals for this project involve allowing users to get reports on their upcoming date
                   using image matching and AI.
                 </p>,
-                cardImage: '/dish_screenshot_1.png',
+                cardImage: '/dish_screenshot_1.webp',
                 cardImageAlt: 'Homepage for letsdish.io',
                 url: 'http://letsdish.io/',
                 slideImages: [
                   {
-                    image: '/dish_screenshot_1.png',
+                    image: '/dish_screenshot_1.webp',
                     imageAlt: 'Screenshot of home page from letsdish.io'
                   },
                   {
-                    image: '/dish_screenshot_2.png',
+                    image: '/dish_screenshot_2.webp',
                     imageAlt: 'Screenshot of section of home page from letsdish.io'
                   },
                   {
-                    image: '/dish_screenshot_3.png',
+                    image: '/dish_screenshot_3.webp',
                     imageAlt: 'Screenshot of Dish Report from letsdish.io'
                   },
                   {
-                    image: '/dish_screenshot_4.png',
+                    image: '/dish_screenshot_4.webp',
                     imageAlt: 'Screenshot of leaderboard from letsdish.io'
                   },
                   {
-                    image: '/dish_screenshot_5.png',
+                    image: '/dish_screenshot_5.webp',
                     imageAlt: 'Screenshot of campus rankings from letsdish.io'
                   }
                 ]
@@ -224,20 +224,20 @@ export default function HomePage() {
                   to attend. Built with 2 team mates under a time crunch this app was a great way to begin live developing with
                   Ruby on Rails. Challenges included a live map with clickable pins and scheduling bookings between 2 users.
                 </p>,
-                cardImage: '/doppel_screenshot_1.png',
+                cardImage: '/doppel_screenshot_1.webp',
                 cardImageAlt: 'Homepage for Doppel',
                 url: 'https://new-doppel.herokuapp.com/',
                 slideImages: [
                   {
-                    image: '/doppel_screenshot_1.png',
+                    image: '/doppel_screenshot_1.webp',
                     imageAlt: 'Screenshot of home page from Doppel'
                   },
                   {
-                    image: '/doppel_screenshot_2.png',
+                    image: '/doppel_screenshot_2.webp',
                     imageAlt: 'Screenshot of booking from Doppel'
                   },
                   {
-                    image: '/doppel_screenshot_3.png',
+                    image: '/doppel_screenshot_3.webp',
                     imageAlt: 'Screenshot of incoming and outgoing bookings from Doppel'
                   }
                 ]
@@ -251,35 +251,35 @@ export default function HomePage() {
                   Challenges included time management and including a functional map with clickable drop pins, and a web scraping feature
                   that could fill the app&apos;s index with local plant species.
                 </p>,
-                cardImage: '/foragr_screenshot_1.png',
+                cardImage: '/foragr_screenshot_1.webp',
                 cardImageAlt: 'Landing page for Foragr',
                 url: 'https://github.com/frauzino/foragr',
                 slideImages: [
                   {
-                    image: '/foragr_screenshot_1.png',
+                    image: '/foragr_screenshot_1.webp',
                     imageAlt: 'Screenshot of landing page from Foragr'
                   },
                   {
-                    image: '/foragr_screenshot_2.png',
+                    image: '/foragr_screenshot_2.webp',
                     imageAlt: 'Screenshot of several screens of Foragr'
                   },
                   {
-                    image: '/foragr_screenshot_3.png',
+                    image: '/foragr_screenshot_3.webp',
                     imageAlt: 'Screenshot of homepage and map feature of Foragr',
                     imageFormat: 'mobile'
                   },
                   {
-                    image: '/foragr_screenshot_4.png',
+                    image: '/foragr_screenshot_4.webp',
                     imageAlt: 'Screenshot of an active cache, featuring map, and images uploaded by users.',
                     imageFormat: 'mobile'
                   },
                   {
-                    image: '/foragr_screenshot_5.png',
+                    image: '/foragr_screenshot_5.webp',
                     imageAlt: 'Screenshot of saved species feature of Foragr',
                     imageFormat: 'mobile'
                   },
                   {
-                    image: '/foragr_screenshot_6.png',
+                    image: '/foragr_screenshot_6.webp',
                     imageAlt: 'Screenshot of bookmarking a species in Foragr',
                     imageFormat: 'mobile'
                   }
