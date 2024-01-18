@@ -5,6 +5,7 @@ import { Banner } from './components/banner'
 import { Navbar } from './components/navbar'
 import { Section } from './components/section'
 import { ProgressBar } from './components/progress-bar'
+import { MobileNav } from './components/mobile-nav'
 
 export default function HomePage() {
   return (
@@ -13,6 +14,9 @@ export default function HomePage() {
       <Banner
         header={'Richard Young'}
         content={'Full Stack Web Developer and Shopify Expert'}
+      />
+      <MobileNav
+        navItems={['About Me', 'Tech Stack', 'Projects', 'Contact']}
       />
       <div className={styles.master_container}>
         <Navbar
