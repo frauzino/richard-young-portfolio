@@ -39,14 +39,14 @@ export default function HomePage() {
             blockType="text"
             textContent={
               <p>
-                Hi, I'm Richard, a web developer based in Montreal, Canada.
+                Hi, I&apos;m Richard, a web developer based in Montreal, Canada.
                 <br />
                 <br />
-                I'm passionate about bringing exciting ideas to life and solving interesting problems
+                I&apos;m passionate about bringing exciting ideas to life and solving interesting problems
                 through robust, maintanable code.
                 <br />
                 <br />
-                As an ex fine dining chef I bring a unique view and attitude to development, I'm comfortable working with
+                As an ex fine dining chef I bring a unique view and attitude to development, I&apos;m comfortable working with
                 tight deadlines while delivering an excellent product within budget.
               </p>
             }
@@ -185,7 +185,7 @@ export default function HomePage() {
                   This is stage one in the development of Dish, an app designed to integrate with existing dating apps and help
                   ensure safety in the online dating scene. Stage one is primarily designed to collect questionnaire responses from users.
                   With this goal I designed a gamification system to encourage users to fill out reports and to invite their friends.
-                  Under this system users can earn badges, points, and compete against other schools to showcase the school's
+                  Under this system users can earn badges, points, and compete against other schools to showcase the school&apos;s
                   safety score. Challenges of this project revolved mainly around the questionnaire, and ensuring the results were
                   accessible and usable. Future goals for this project involve allowing users to get reports on their upcoming date
                   using image matching and AI.
@@ -220,7 +220,7 @@ export default function HomePage() {
                 title: 'Doppel',
                 subHeading: 'Ruby on Rails, javascript',
                 textContent: <p>
-                  Doppel is an AirBnb clone where a user can hire a doppelganger to replace them at an event they don't want
+                  Doppel is an AirBnb clone where a user can hire a doppelganger to replace them at an event they don&apos;t want
                   to attend. Built with 2 team mates under a time crunch this app was a great way to begin live developing with
                   Ruby on Rails. Challenges included a live map with clickable pins and scheduling bookings between 2 users.
                 </p>,
@@ -249,7 +249,7 @@ export default function HomePage() {
                   An app for the foraging community to share finds and learn more about local wild edibles. This project was built with
                   two team mates under a strict deadline to ensure the app was ready for a live demo.
                   Challenges included time management and including a functional map with clickable drop pins, and a web scraping feature
-                  that could fill the app's index with local plant species.
+                  that could fill the app&apos;s index with local plant species.
                 </p>,
                 cardImage: '/foragr_screenshot_1.png',
                 cardImageAlt: 'Landing page for Foragr',
