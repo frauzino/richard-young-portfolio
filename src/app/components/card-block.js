@@ -10,13 +10,15 @@ export function CardBlock(props) {
     case 'tech':
       return (
         <div className={`${styles.card_block} ${styles.between_just}`}>
-          {cards?.map((card, index) =>(
+          {cards?.map((card, index) => (
             <TechCard
               key={`techcard-${index}`}
               cardTitle={card.title}
               cardLogo={card.logo}
               cardLogoAlt={card.logoAlt}
               cardContent={card.content}
+              skillLevel={card.skillLevel}
+              startDate={card.startDate}
             />
           ))}
         </div>

@@ -1,7 +1,13 @@
 .text_block {
-  margin-top: 2rem;
-  padding: 2rem;
+  margin: 4rem 0;
+  padding: 0 2rem;
   font-size: 1.5rem;
   letter-spacing: 1px;
   line-height: 2rem;
+}
+
+@media screen and (max-width: 749px) {
+  .text_block {
+    padding: 0;
+  }
 }

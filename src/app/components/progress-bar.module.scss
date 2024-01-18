@@ -1,0 +1,29 @@
+.progress_bar {
+  width: 75%;
+  aspect-ratio: 1/1;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  // box-shadow: inset 0px 0px 5px rgba(0, 0, 0, .8), 0px 0px 5px rgba(0, 0, 0, .8);
+  box-shadow: inset 0px 0px 5px var(--dark-gray), 0px 0px 5px var(--dark-gray);
+}
+
+.progress_bar_inner {
+  aspect-ratio: 1/1;
+  width: 80%;
+  border-radius: 50%;
+  // box-shadow: inset 0px 0px 5px rgba(0, 0, 0, .6), 0px 0px 5px rgba(0, 0, 0, .6);
+  box-shadow: inset 0px 0px 5px var(--dark-gray), 0px 0px 5px var(--dark-gray);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.inner_text {
+  color: var(--font-color-alt);
+  display: flex;
+  flex-direction: column;
+  font-size: .8rem;
+}

@@ -26,6 +26,7 @@ export function Slideshow(props) {
           alt={slide.imageAlt}
           width={800}
           height={600}
+          style={slide.imageFormat == 'mobile' ? {objectFit: 'contain'} : {objectFit: 'cover'}}
         />
       ))}
       <div className={styles.left_wrapper} onClick={prevSlide}>

@@ -1,7 +1,7 @@
 .card_container {
   background-color: transparent;
   width: 10rem;
-  height: 15rem;
+  aspect-ratio: 2/3;
   perspective: 1000px;
   border-radius: 1rem;
 }
@@ -37,21 +37,22 @@
 }
 
 .card_front {
-  background: var(--moss-green);
+  background: radial-gradient(circle at 50% 61%, #68685a, #363635 50%);
+  color: var(--font-color-alt);
 }
 
 .card_back {
-  background: var(--dark-gray);
+  background: var(--moss-green);
   color: var(--font-color-alt);
   transform: rotateY(180deg);
 }
 
 .logo_background {
   width: 100%;
-  padding: 1.5rem;
+  padding: .5rem;
   aspect-ratio: 1/1;
   border-radius: 50%;
-  background: var(--dark-gray);
+  // background: var(--dark-gray);
   display: flex;
   justify-content: center;
   align-items: center;
@@ -59,8 +60,17 @@
 
 .logo {
   height: 100%;
+  border-radius: 50%;
 }
 
 .card_content {
   font-weight: lighter;
+  width: 100%;
+  aspect-ratio: 1/1;
+}
+
+@media screen and (max-width: 749px) {
+  .card_container {
+    width: 40%;
+  }
 }

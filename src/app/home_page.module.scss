@@ -3,10 +3,17 @@
 }
 
 .main_content_container {
-  height: 300rem;
   margin-top: 5rem;
   padding: 0 5rem;
   flex: 3.5;
   display: flex;
   flex-direction: column;
+}
+
+@media screen and (max-width: 749px) {
+  .main_content_container {
+    width: 100%;
+    margin: 0;
+    padding: 0 2rem;
+  }
 }

@@ -1,7 +1,8 @@
 .navbar {
   width: 20%;
   height: 100vh;
-  background: var(--dark-gray);
+  // background: var(--dark-gray);
+  background: radial-gradient(ellipse at 50% 50%, #404038, #363635 80%);
   display: flex;
   flex-direction: column;
   padding: 1rem;
@@ -33,7 +34,7 @@
   margin-top: 3rem;
 
   .nav_link:nth-child(1) {
-    border-top: 2px solid var(--moss-green);
+    border-top: 2px solid var(--viridian);
 
   }
 }
@@ -45,7 +46,7 @@
   line-height: 4rem;
   font-weight: 200;
   border-bottom: solid;
-  border-color: var(--moss-green);
+  border-color: var(--viridian);
   border-width: 2px;
 
   > a {
@@ -58,5 +59,20 @@
 
   &:hover > a {
     width: 100%;
+  }
+}
+
+.navbar__socials {
+  position: absolute;
+  bottom: 1rem;
+  left: 0;
+  display: flex;
+  justify-content: center;
+  width: 100%;
+}
+
+@media screen and (max-width: 749px) {
+  .navbar {
+    display: none;
   }
 }

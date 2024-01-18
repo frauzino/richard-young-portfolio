@@ -7,7 +7,7 @@
   position: absolute;
   width: 100%;
   height: 100%;
-  object-fit: cover;
+  // object-fit: cover;
   object-position: center;
   border-radius: 1rem 1rem 0 0;
   opacity: 0;
@@ -41,4 +41,10 @@
 .right_wrapper {
   border-radius: 1rem 0 0 1rem;
   right: 0;
+}
+
+@media screen and (max-width: 749px) {
+  .left, .right {
+    width: 1.5rem;
+  }
 }

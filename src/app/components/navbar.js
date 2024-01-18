@@ -1,7 +1,9 @@
 import styles from "./navbar.module.scss"
 import Link from "next/link";
+import { SocialIcons } from "./social_icons";
 
 export function Navbar(props) {
+  const socials = props.socials
   const header = props.header
   const navItems = props.navItems
 
@@ -17,6 +19,12 @@ export function Navbar(props) {
           </li>
         ))}
       </ul>
+      <div className={styles.navbar__socials}>
+        <SocialIcons
+          socials={socials}
+          parent={'Navbar'}
+        />
+      </div>
     </div>
   )
 }

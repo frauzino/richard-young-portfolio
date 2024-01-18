@@ -1,6 +1,6 @@
 .button {
   border-radius: var(--card-radius);
-  border: 2px solid var(--moss-green);
+  border: 2px solid var(--viridian);
   background: var(--background-color);
   text-align: center;
   padding: .5rem 2rem;
@@ -9,7 +9,7 @@
 
   &:hover {
     cursor: pointer;
-    background: var(--moss-green);
+    background: var(--viridian);
     color: var(--font-color-alt);
   }
 }

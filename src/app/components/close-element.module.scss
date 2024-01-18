@@ -3,7 +3,11 @@
   top: 0;
   right: 0;
   z-index: 1;
-  margin: 1rem;
+  border-radius: .5rem;
+  margin: .5rem;
+  padding: .5rem;
+  background: var(--light-gray);
+  display: flex;
 }
 
 .x_icon:hover {

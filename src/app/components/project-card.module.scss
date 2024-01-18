@@ -1,7 +1,7 @@
 .card_container {
   background-color: transparent;
   width: 28rem;
-  height: 22rem;
+  aspect-ratio: 4/3;
   perspective: 1000px;
   border-radius: var(--card-radius);
   transition: .6s;
@@ -66,7 +66,8 @@
 }
 
 .card_back {
-  background: var(--background-color);
+  background: var(--moss-green);
+  color: var(--font-color-alt);
   transform: rotateY(180deg);
 }
 
@@ -102,7 +103,7 @@
   position: fixed;
   width: 70vw;
   left: calc(30vw - 4%);
-  bottom: 4rem;
+  bottom: 2rem;
   z-index: 2;
   transition: all .6s;
   transform: translateY(115%);
@@ -120,4 +121,19 @@
   top: 0;
   left: 0;
   z-index: 1;
+}
+
+@media screen and (max-width: 749px) {
+  .card_outside_container {
+    width: 100%;
+  }
+
+  .card_container {
+    width: 100%;
+  }
+
+  .slideshow_card_container {
+    left: 1rem;
+    width: calc(100% - 2rem);
+  }
 }

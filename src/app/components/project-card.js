@@ -31,15 +31,25 @@ export function ProjectCard(props) {
     setCardState(!cardState);
   }
 
+  const cardToFlip = useRef()
+
+  const flipCardBack = () => {
+    cardToFlip.current.style.transform = 'rotateY(180deg)'
+  }
+
+  const flipCardFront = () => {
+    cardToFlip.current.style.transform = 'rotateY(0deg)'
+  }
+
   return (
-    <div>
+    <div className={styles.card_outside_container}>
       <div
         className={`${styles.card_container}::before`}
         style={{width: '28rem'}}
       />
       <div className={styles.card_container}>
-        <div className={styles.card}>
-          <div className={styles.card_front}>
+        <div className={styles.card} ref={cardToFlip}>
+          <div className={styles.card_front} onClick={flipCardBack}>
             <Image
               className={styles.card_image}
               loading='lazy'
@@ -49,7 +59,7 @@ export function ProjectCard(props) {
               width={800}
             />
           </div>
-          <div className={styles.card_back}>
+          <div className={styles.card_back} onClick={flipCardFront}>
             <h3
               className={styles.card_title}
               onClick={openElement}
