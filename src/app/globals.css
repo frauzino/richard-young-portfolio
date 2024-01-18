@@ -12,7 +12,7 @@
 
   --font-color-default: #505050;
   --font-color-alt: #ffeddf;
-  --text-shadow: 0px 0.4px 1px rgba(0, 0, 0, 0.25);
+  --text-shadow: 0px 0px 10px #513d3a82;
   --text-shadow-alt: 0px 0.4px 1px #fdf4edb9;
 
   --background-color: #fdf4ed;
