@@ -3,6 +3,7 @@ import { SectionHeader } from './section-header'
 import { TextBlock } from "./text-block"
 import { CardBlock } from "./card-block"
 import { ContactBlock } from "./contact-block"
+import { TechsBlock } from "./techs-block"
 
 
 export function Section(props) {
@@ -12,6 +13,7 @@ export function Section(props) {
   const cardType = props.cardType
   const cards = props.cards
   const socials = props.socials
+  const techs = props.techs
 
   const blockSwitch = (blockType) => {
     switch (blockType) {
@@ -26,6 +28,12 @@ export function Section(props) {
           <CardBlock
             cardType={cardType}
             cards={cards}
+          />
+        );
+      case 'techs':
+        return (
+          <TechsBlock
+            techs={techs}
           />
         );
       default:

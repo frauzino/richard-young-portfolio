@@ -1,15 +1,52 @@
 .button {
   border-radius: var(--card-radius);
-  border: 2px solid var(--viridian);
-  background: var(--background-color);
+  background: linear-gradient(180deg, rgba(128,157,168,1) 0%, rgba(229,234,237,1) 33%, rgba(57,77,83,1) 89%, rgba(187,208,214,1) 100%);
   text-align: center;
   padding: .5rem 2rem;
   transition: .25s;
   color: var(--font-color-default);
+  text-shadow: 2px 3px 1px rgba(245,245,245,0.5);
+  position: relative;
+  box-shadow:
+  0 0 7px #fff,
+  0 0 9px #01e7f4,
+  0 0 15px #01e7f4;
 
   &:hover {
-    cursor: pointer;
-    background: var(--viridian);
-    color: var(--font-color-alt);
+    box-shadow:
+      0 0 10px #fff,
+      0 0 20px #01e7f4,
+      0 0 40px #01e7f4;
+  }
+}
+
+.gloss {
+  background: linear-gradient(-55deg, transparent 40%, #fafafac2 50%, transparent 60%);
+  background-size: 300%;
+  background-position-x: 100%;
+  border-radius: var(--card-radius);
+  z-index: 1;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  aspect-ratio: 1/1;
+  top: 0;
+  transition: .2s;
+
+
+  &:hover {
+    animation: shimmer 3s linear infinite;
+  }
+}
+
+@keyframes shimmer {
+  0% {
+    background-position-x: 100%;
+  }
+  20% {
+    background-position-x: 0%;
+  }
+  100% {
+    background-position-x: 0%;
   }
 }

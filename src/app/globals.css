@@ -11,12 +11,13 @@
   --font-headers: 'Encode Sans', sans-serif;
 
   --font-color-default: #505050;
-  --font-color-alt: #ffeddf;
+  --font-color-alt: #d1d1d1;
   --text-shadow: 0px 0px 10px #513d3a82;
   --text-shadow-alt: 0px 0.4px 1px #fdf4edb9;
 
   --background-color: #fdf4ed;
   --background-color-alt: #363635;
+  --background-color-dark: rgb(3, 1, 8);
 
   --dark-gray: #363635;
   --viridian: #688D7D;
@@ -49,9 +50,9 @@ body {
 }
 
 body {
-  color: rgb(var(--font-color-default));
-  background: var(--background-color);
-  font-family: var(--font-default);
+  color: var(--font-color-alt);
+  background: var(--background-color-dark);
+  /* font-family: var(--font-default); */
   font-size: 1.2rem;
 }
 

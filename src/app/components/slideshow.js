@@ -31,7 +31,7 @@ export function Slideshow(props) {
       ))}
       <div className={styles.left_wrapper} onClick={prevSlide}>
         <Image
-          className={styles.left}
+          className={styles.arrow}
           loading='lazy'
           src='/base_chevron_left.svg'
           alt="Left chevron"
@@ -41,7 +41,7 @@ export function Slideshow(props) {
       </div>
       <div className={styles.right_wrapper} onClick={nextSlide}>
       <Image
-          className={styles.left}
+          className={styles.arrow}
           loading='lazy'
           src='/base_chevron_right.svg'
           alt="Right chevron"

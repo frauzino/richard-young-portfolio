@@ -1,5 +1,6 @@
 import styles from "./card-block.module.scss"
 import { ProjectCard } from "./project-card"
+import { ProjectCardMetal } from "./project-card-2"
 import { TechCard } from "./tech-card"
 
 export function CardBlock(props) {
@@ -27,7 +28,7 @@ export function CardBlock(props) {
       return (
         <div className={`${styles.card_block} ${styles.center_just}`}>
           {cards?.map((card, index) =>(
-            <ProjectCard
+            <ProjectCardMetal
               key={`projectcard-${index}`}
               title={card.title}
               subHeading={card.subHeading}

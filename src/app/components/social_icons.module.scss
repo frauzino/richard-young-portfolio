@@ -7,7 +7,7 @@
 
 .social_icons_wrapper {
   display: flex;
-  justify-content: start;
+  justify-content: flex-start;
   gap: 2rem;
 }
 
@@ -19,14 +19,9 @@
 }
 
 .icon {
-  transition: all .3s;
+  transition: all .2s;
   width: 80%;
-  height: 80%;
-
-  &:hover {
-    width: 100%;
-    height: 100%;
-  }
+  height: auto;
 }
 
 @media screen and (max-width: 749px) {

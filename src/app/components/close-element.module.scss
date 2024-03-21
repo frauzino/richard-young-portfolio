@@ -6,10 +6,33 @@
   border-radius: .5rem;
   margin: .5rem;
   padding: .5rem;
-  background: var(--light-gray);
+  background: transparent;
   display: flex;
 }
 
-.x_icon:hover {
-  cursor: pointer;
+.x_icon {
+  transition: .2s;
+  filter: invert(90%)
+    sepia(99%) saturate(30%)
+    hue-rotate(257deg)
+    brightness(106%)
+    contrast(100%)
+    drop-shadow(0 0 0px #fff)
+    drop-shadow(0 0 3px #fff)
+    drop-shadow(0 0 7px #01e7f4)
+    drop-shadow(0 0 15px #01e7f4);
+
+    &:hover {
+      cursor: pointer;
+      filter: invert(90%)
+        sepia(99%) saturate(30%)
+        hue-rotate(257deg)
+        brightness(106%)
+        contrast(100%)
+        drop-shadow(0 0 0px #fff)
+        drop-shadow(0 0 5px #fff)
+        drop-shadow(0 0 7px #01e7f4)
+        drop-shadow(0 0 12px #01e7f4)
+        drop-shadow(0 0 21px #01e7f4);
+    }
 }

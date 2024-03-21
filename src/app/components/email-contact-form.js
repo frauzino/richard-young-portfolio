@@ -1,6 +1,10 @@
 import styles from "./email-contact-form.module.scss"
 import React, { useRef } from 'react';
 import emailjs from '@emailjs/browser';
+import clsx from "clsx";
+import localFont from "next/font/local";
+
+const contourGenerator = localFont({ src: '../../../public/fonts/contour-generator.regular.otf'})
 
 export function EmailContactForm() {
 
@@ -51,11 +55,14 @@ export function EmailContactForm() {
             />
           </div>
         </div>
-      <input
-        className={styles.email_form__submit}
-        type="submit"
-        value="Send"
-      />
+      <div className={styles.submit_wrapper}>
+        <div className={styles.gloss}/>
+        <input
+          className={clsx(styles.email_form__submit, contourGenerator.className)}
+          type="submit"
+          value="Send"
+        />
+      </div>
     </form>
     </div>
   )

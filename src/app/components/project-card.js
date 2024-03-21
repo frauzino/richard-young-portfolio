@@ -1,6 +1,5 @@
 import { useState } from 'react';
 import { useRef } from 'react';
-import { Button } from "./button"
 import Image from "next/image"
 import styles from "./project-card.module.scss";
 import { SlideshowCard } from './slideshow-card';
