@@ -1,0 +1,178 @@
+.wiggle,
+.scurve,
+.largeSemiCircle,
+.smallSemiCircle,
+.circle,
+.LWiggle,
+.squaredWiggle{
+  transition: all 1s ease;
+
+    path, circle {
+    animation: draw 5s forwards ease-in-out, fade 2s forwards;
+  }
+}
+
+.wiggle {
+  top: 5%;
+  left: 0;
+
+  path {
+    stroke-dashoffset: 1630;
+    stroke-dasharray: 1630;
+  }
+}
+
+.scurve {
+  right: 15%;
+  bottom: -5%;
+
+  path {
+    stroke-dashoffset: 1150;
+    stroke-dasharray: 1150;
+  }
+}
+
+.largeSemiCircle {
+  bottom: 0;
+  // left: 20vw;
+  transform: translateX(-15vw);
+  // height: clamp(5rem, 16vw, 22rem);
+
+  path {
+    stroke-dashoffset: 740;
+    stroke-dasharray: 740;
+  }
+}
+
+.smallSemiCircle {
+  top: 30%;
+  right: 0;
+
+  path {
+    stroke-dashoffset: 440;
+    stroke-dasharray: 440;
+  }
+}
+
+.circle {
+  bottom: 3%;
+  left: 30%;
+  width: clamp(10rem, 20vw, 30rem);
+
+  circle {
+    stroke-dashoffset: 880;
+    stroke-dasharray: 880;
+  }
+}
+
+.LWiggle {
+  top: 20%;
+  left: 15%;
+  width: clamp(15rem, 32vw, 30rem);
+
+  path {
+    stroke-dashoffset: 1480;
+    stroke-dasharray: 1480;
+  }
+}
+
+.squaredWiggle {
+  bottom: 0;
+  left: 0;
+  height: clamp(15rem, 20vw, 30rem);
+  width: clamp(15rem, 28vw, 30rem);
+
+  path {
+    stroke-dashoffset: 620;
+    stroke-dasharray: 620;
+  }
+}
+
+@keyframes draw {
+  to {
+    stroke-dashoffset: 0;
+  }
+}
+
+@keyframes fade {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+
+@media screen and (min-width: 750px) and (max-width: 1024px) {
+  // Home page SVGs
+  .wiggle {
+    transform: translateX(-20vw);
+  }
+
+  .scurve {
+    transform: translateX(15vw);
+  }
+
+  .largeSemiCircle {
+    transform: translateX(-40vw) translateY(10vh);
+  }
+
+  .smallSemiCircle {
+    transform: translateY(50vh);
+  }
+
+  // Projects SVGs
+
+  .LWiggle {
+    left: 10%;
+  }
+
+  .squaredWiggle {
+    bottom: -5%;
+  }
+
+  .circle {
+    bottom: 10%;
+  }
+}
+
+@media screen and (max-width: 749px) {
+  // home page SVGs
+  .wiggle {
+    transform: scale(80%) translateX(22vw) translateY(-35vh) rotateY(180deg);
+    left: auto;
+    right: 0
+  }
+
+  .largeSemiCircle {
+    transform: scale(80%) translateX(-50vw) translateY(10vh);
+  }
+
+  .scurve {
+    transform: scale(80%);
+    opacity: 0;
+  }
+
+  .smallSemiCircle {
+    transform: scale(80%) translateX(5vw) translateY(30vh);
+    // opacity: 0;
+  }
+
+  // projects SVGs
+
+  .LWiggle {
+    top: 0%;
+  }
+
+  .circle {
+    bottom: 40%;
+    right: auto;
+    left: 50%;
+  }
+
+  .squaredWiggle {
+    bottom: 35%;
+    left: 0;
+  }
+}

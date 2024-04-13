@@ -1,6 +1,12 @@
+'use client'
+
 import styles from "./email-contact-form.module.scss"
 import React, { useRef } from 'react';
 import emailjs from '@emailjs/browser';
+import localFont from 'next/font/local'
+import clsx from 'clsx'
+
+const rocketeers = localFont({src: '../../../public/fonts/Rocketeers.otf'})
 
 export function EmailContactForm() {
 
@@ -19,7 +25,7 @@ export function EmailContactForm() {
 
   return (
     <div className={styles.email_form__container}>
-      <h2>Send me an email</h2>
+      <h1 className={clsx(styles.header, rocketeers.className)}>Send me an email</h1>
       <form
         className={styles.email_form}
         ref={form}
@@ -27,35 +33,37 @@ export function EmailContactForm() {
       >
         <div className={styles.email_form__input_wrapper}>
           <div className={styles.email_name_wrapper}>
-            {/* <label className={styles.email_form__label}>Name</label> */}
             <input
               className={styles.email_form__input}
               placeholder="Name"
               type="text"
               name="user_name"
+              required
             />
-            {/* <label className={styles.email_form__label}>Email</label> */}
             <input
               className={styles.email_form__input}
               placeholder="Email"
               type="email"
               name="user_email"
+              required
             />
           </div>
           <div className={styles.message_wrapper}>
-            {/* <label className={styles.email_form__label}>Message</label> */}
             <textarea
               className={`${styles.email_form__textarea} ${styles.email_form__input}`}
               placeholder="Message"
               name="message"
+              required
             />
           </div>
         </div>
-      <input
-        className={styles.email_form__submit}
-        type="submit"
-        value="Send"
-      />
+      <div className={styles.submitWrapper}>
+        <input
+          className={clsx(styles.email_form__submit, rocketeers.className)}
+          type="submit"
+          value="Send"
+        />
+      </div>
     </form>
     </div>
   )

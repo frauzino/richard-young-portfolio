@@ -1,0 +1,28 @@
+.logoContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: .25rem solid var(--retro-orange);
+  background: var(--off-white);
+  overflow: hidden;
+  width: 5rem;
+  height: 5rem;
+  transition: .5s;
+  border-radius: 1rem;
+
+  &:active {
+    transform: scale(90%);
+  }
+}
+
+.logo {
+  width: 5rem;
+  height: auto;
+  transform: scale(200%);
+  transition: .5s;
+  cursor: pointer;
+
+  &:hover {
+    transform: scale(80%);
+  }
+}

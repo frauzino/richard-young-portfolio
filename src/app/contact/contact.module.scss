@@ -1,0 +1,11 @@
+.contactContainer {
+  display: flex;
+  flex-direction: column;
+  gap: 5rem;
+}
+
+@media screen and (max-width: 749px) {
+  .contactContainer {
+    padding: 1rem;
+  }
+}

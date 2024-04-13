@@ -1,6 +1,7 @@
 import { useState } from 'react';
 import styles from './slideshow.module.scss'
 import Image from 'next/image'
+import clsx from 'clsx'
 
 export function Slideshow(props) {
   const slideImages = props.slideImages
@@ -15,21 +16,25 @@ export function Slideshow(props) {
     setCurrentIndex(newIndex);
   };
 
+  setInterval(() => {
+    nextSlide()
+  }, 5000);
+
   return (
     <div className={styles.slideshow}>
       {slideImages?.map((slide, index) => (
         <Image
           key={`slide-${index}`}
-          className={`${styles.slideImage} ${index === currentIndex ? `${styles.active}` : ''}`}
+          className={clsx(styles.slideImage, index === currentIndex ? styles.active : '')}
           loading='lazy'
           src={slide.image}
           alt={slide.imageAlt}
-          width={800}
-          height={600}
+          width={1000}
+          height={1000}
           style={slide.imageFormat == 'mobile' ? {objectFit: 'contain'} : {objectFit: 'cover'}}
         />
       ))}
-      <div className={styles.left_wrapper} onClick={prevSlide}>
+      {/* <div className={styles.left_wrapper} onClick={prevSlide}>
         <Image
           className={styles.left}
           loading='lazy'
@@ -48,7 +53,7 @@ export function Slideshow(props) {
           width={50}
           height={50}
         />
-      </div>
+      </div> */}
     </div>
   )
 }

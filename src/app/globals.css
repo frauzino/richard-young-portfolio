@@ -31,6 +31,14 @@
   --card-shadow: 4px 4px 15px var(--shadow-gray);
 
   --card-radius: 1rem;
+
+  /* retro colours */
+
+  --off-white: #FFFAE8;
+  --jet-black: #313339;
+  --retro-red: #A23E48;
+  --retro-blue: #6C8EAD;
+  --retro-orange: #F18F01;
 }
 
 * {
@@ -50,13 +58,38 @@ body {
 
 body {
   color: rgb(var(--font-color-default));
-  background: var(--background-color);
+  /* background: var(--background-color); */
   font-family: var(--font-default);
   font-size: 1.2rem;
+  letter-spacing: .5px;
+  line-height: 1.75rem;
+  overflow-x: hidden;
+
+  /* retro */
+
+  background: var(--off-white)
+}
+
+.backgroundTexture {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: url('/paper_texture.jpg');
+  filter: sepia(30%);
+  z-index: -1;
+}
+
+.pageContainer {
+  margin-top: 10rem;
+  padding: 6rem;
 }
 
 h1, h2, h3, h4, h5, h6 {
   font-family: var(--font-headers);
+  font-weight: lighter;
+  color: var(--jet-black)
 }
 
 a {
@@ -74,4 +107,53 @@ a {
 
 .hidden {
   display: none;
+}
+
+.svg {
+  position: absolute;
+}
+
+.tooltip {
+  position: relative;
+  display: inline-block;
+}
+
+.tooltip-text {
+  visibility: hidden;
+  width: 100px;
+  background-color: var(--jet-black);
+  color: var(--off-white);
+  font-size: .8rem;
+  text-align: center;
+  border-radius: 6px;
+  position: absolute;
+  z-index: 1;
+  bottom: -30%;
+  left: 50%;
+  margin-left: -50px;
+  opacity: 0;
+  transition: opacity 0.3s;
+}
+
+.tooltip-text:after {
+  content: "";
+  position: absolute;
+  bottom: 100%;
+  left: 50%;
+  margin-left: -5px;
+  border-width: 5px;
+  border-style: solid;
+  border-color: transparent transparent var(--jet-black) transparent;
+}
+
+.tooltip:hover .tooltip-text {
+  visibility: visible;
+  opacity: 1;
+}
+
+@media screen and (max-width: 1024px) {
+  .pageContainer {
+    margin-top: 8rem;
+    padding: 0;
+  }
 }
