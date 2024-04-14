@@ -21,12 +21,12 @@ export default function AboutMe() {
     <div className='pageContainer'>
       <div className={styles.aboutMeContainer}>
         <div className={styles.textContainer}>
-          Hi, I'm Richard, a web developer based in Montreal, Canada.
+          {`Hi, I'm Richard, a web developer based in Montreal, Canada.
           I'm a full stack developer with a background in fine dining and pastry.
           I approach any project with enthusiasm and an eye for detail.
           I pride myself on writing clear, maintainable code using modular components, primarily in Ruby on Rails and React.js.
           I'm also an avid gardener, with a collection of over 100 tropical houseplants and a small urban vegetable garden in the summer.
-          I appreciate taking on new, creative challenges where I can learn and continue to grow as a developer.
+          I appreciate taking on new, creative challenges where I can learn and continue to grow as a developer.`}
           <div className={styles.downloadWrapper}>
             <Image
               className='download-arrow'
