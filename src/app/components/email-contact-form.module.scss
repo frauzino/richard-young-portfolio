@@ -38,23 +38,42 @@
   border: 1px solid var(--dark-gray);
 }
 
-.email_form__submit {
-  width: fit-content;
+.submitWrapper {
+  width: 3rem;
   align-self: end;
-  font-size: 1.2rem;
-  border-radius: var(--card-radius);
-  border: 2px solid var(--moss-green);
-  background: var(--background-color);
+  display: inline-block;
+  position: relative;
+}
+
+.email_form__submit {
+  font-size: 1.5rem;
   text-align: center;
-  padding: .5rem 2rem;
-  transition: .25s;
-  color: var(--font-color-default);
+  background-color: transparent;
+  color: var(--jet-black);
+  border: 2px solid transparent;
+  cursor: pointer;
+  overflow: hidden;
+  transition: .3s;
 
   &:hover {
-    cursor: pointer;
-    background: var(--moss-green);
-    color: var(--font-color-alt);
+    letter-spacing: .25rem;
   }
+}
+
+.submitWrapper:after {
+  position: absolute;
+  display: block;
+  content: "";
+  height: 2px;
+  left: 0;
+  bottom: 0;
+  background-color: var(--jet-black);
+  width: 0;
+  transition: .3s;
+}
+
+.submitWrapper:hover:after {
+  width: 100%;
 }
 
 @media screen and (max-width: 749px) {

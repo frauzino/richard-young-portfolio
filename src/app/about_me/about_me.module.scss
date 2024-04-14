@@ -1,0 +1,87 @@
+.aboutMeContainer {
+  display: flex;
+  // flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 5rem;
+}
+
+.textContainer {
+  flex: 1;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 1rem;
+}
+
+.downloadWrapper {
+  display: flex;
+  align-items: center;
+  transition: .2s;
+
+  &:hover {
+    cursor: pointer;
+  }
+}
+
+.link {
+  position: relative;
+  transition: .3s;
+
+  &:hover {
+    letter-spacing: .25rem;
+  }
+
+  &:hover:after {
+    width: 100%;
+  }
+}
+
+.link:after {
+  position: absolute;
+  bottom: 0;
+  content: "";
+  display: block;
+  height: 1px;
+  background: var(--jet-black);
+  left: 0;
+  width: 0;
+  transition: .2s ease;
+}
+
+.skillsContainer {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+.iconsContainer {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+.sectionHeader {
+  font-size: 3rem;
+  margin-bottom: 2rem;
+  align-self: center;
+}
+
+@media screen and (max-width: 749px) {
+  .aboutMeContainer {
+    flex-direction: column;
+  }
+
+  .textContainer, .skillsContainer {
+    padding: 1rem;
+  }
+
+  .iconsContainer {
+    justify-content: space-around;
+  }
+
+  .icon {
+    width: 4.5rem;
+  }
+}

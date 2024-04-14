@@ -1,0 +1,37 @@
+.banner_container {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  width: 100vw;
+}
+
+.text_box {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: var(--jet-black);
+  line-height: normal;
+}
+
+.header {
+font-size: clamp(4rem, 8vw, 8rem);
+font-weight: lighter;
+}
+
+.content {
+  font-size: clamp(1.5rem, 3vw, 3rem);
+}
+
+.canvas {
+  position: absolute;
+}
+
+@media screen and (max-width: 749px) {
+  .text_box {
+    text-align: center;
+  }
+}
