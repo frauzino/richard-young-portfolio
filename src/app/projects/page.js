@@ -31,8 +31,8 @@ export default function Projects() {
             </div>
           {ProjectData().map((project, index) => (
             index === activeIndex &&
-            <div className={styles.slideshowWrapper}>
-              <Slideshow key={`images-project-${index}`} slideImages={project.images}/>
+            <div key={`images-project-${index}`} className={styles.slideshowWrapper}>
+              <Slideshow slideImages={project.images}/>
               <div className={styles.toolsContainer}>
                 <ul className={styles.tools}>
                   {project.content.tools.map((item, index) => (

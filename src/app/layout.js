@@ -14,17 +14,17 @@ export default function RootLayout({ children }) {
     <html lang="en">
       {/* <body className={inter.className}>{children} */}
       <body>{children}
-      <div id="foglayer_01" class="fog">
-        <div class="image01"></div>
-        <div class="image02"></div>
+      <div id="foglayer_01" className="fog">
+        <div className="image01"></div>
+        <div className="image02"></div>
       </div>
-      <div id="foglayer_02" class="fog">
-        <div class="image01"></div>
-        <div class="image02"></div>
+      <div id="foglayer_02" className="fog">
+        <div className="image01"></div>
+        <div className="image02"></div>
       </div>
-      <div id="foglayer_03" class="fog">
-        <div class="image01"></div>
-        <div class="image02"></div>
+      <div id="foglayer_03" className="fog">
+        <div className="image01"></div>
+        <div className="image02"></div>
       </div>
       <Navbar
         navItems={[
