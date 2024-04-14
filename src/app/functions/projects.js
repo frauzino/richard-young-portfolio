@@ -2,12 +2,23 @@ export function ProjectData() {
   const projects = [
     {
       title: 'Overwise',
-      content: `An application for Overwatch players, Overwise allows players to track their performance though a season of competitive play.
-        Overwise offers rich data to allow users to see how they are performing by several different metrics, including Hero, map, gamemode and more.
-        Overwise is a MERN app, build with Node.js, MongoDB, Express.js, and React.js. It relies on the Overfast API to collect game data, I also
-        integrated firebase to simplify login for users. Challenges were finding appropriate data as Overwatch does not have a publicly available API,
-        Overfast API offers most data, but not the live competitive season. To get that data I needed to scrape the Overwatch website itself.Another
-        issue was managing state for the filters. They needed to be dynamic, and stackable, so it was important to effectively manage state and useEffects.`,
+      url: 'https://www.overwise-gg.com/',
+      content: {
+        summary: `An application for Overwatch players, Overwise allows players to track their performance though multiple seasons of competitive play.
+          Overwise offers rich data to allow users to see how they are performing by several different metrics, including Hero, map, gamemode and more.`,
+        features: [
+          'Login using Firebase; users can create an account or link their Google account.',
+          'Track your matches by inputting match results.',
+          'Filter matches to display rich data for performance tracking.'
+        ],
+        tools: [
+          'Node.js',
+          'MongoDB',
+          'React.js',
+          'Express.js',
+          'Firebase'
+        ]
+      },
       images: [
         {
           image: '/overwise_screenshot_1.png',
@@ -29,13 +40,23 @@ export function ProjectData() {
     },
     {
       title: 'Cafe Pista',
-      content: `Cafe Pista is a local café here in Montreal.
-        I rebuilt their shopify webstore using a modified version of an existing Shopify theme.
-        I was the sole developer on this project, but I worked closely with a designer.
-        There were several custom components involved including slideshows, multiple styles of collection pages, and timeline.
-        The webstore integrates with several Shopify apps for specific functions, such as language translation,
-        subscription services and wholesale services. Some of the challenges of this project revolved around integrating these apps,
-        other challenges were in responsive styling, and conditional styling, dependant on collection and product.`,
+      url: 'https://cafepista.com/',
+      content: {
+        summary: `A Shopify webstore for a group of local Montréal Cafés. This project required working closely with a web designer
+          and developing several custom pages and components as well as integrating the webstore with several 3rd party apps. In the past year
+          the new webstore has seen a 15% increase in sales and an 11% increase in conversion rate.`,
+        features:[
+          'Buy products online.',
+          'Monthly subscription service.',
+          'Wholesale support for commercial accounts.'
+        ],
+        tools: [
+          'Shopify',
+          'Liquid',
+          'JavaScript',
+          'jQuery'
+        ]
+      },
       images: [
         {
           image: '/pista_screenshot_1.webp',
@@ -65,12 +86,23 @@ export function ProjectData() {
     },
     {
       title: 'Dish',
-      content: `This is stage one in the development of Dish, an app designed to integrate with existing dating apps and help
-        ensure safety in the online dating scene. Stage one is primarily designed to collect questionnaire responses from users.
-        With this goal I designed a gamification system to encourage users to fill out reports and to invite their friends.
-        Under this system users can earn badges, points, and compete against other schools to showcase the school's safety score.
-        Challenges of this project revolved mainly around the questionnaire, and ensuring the results were accessible and usable.
-        Future goals for this project involve allowing users to get reports on their upcoming date using image matching and AI.`,
+      url: 'https://letsdish.io/',
+      content: {
+        summary: `A companion app for existing dating apps, Dish's goal is to help reduce toxicity and promote safe encounters in the online dating community.
+          Dish is currently in the funding stage, as such the current version is primarily focused at getting Dish Reports. Towards that end we designed a gamifaction
+          system including points and collectible badges to encourage completing Dish Reports and inviting friends.`,
+        features: [
+          'Fill out Dish Reports, an objective review of your date.',
+          'Facial detection and matching to avoid fraudulent reports.',
+          'Earn collectible badges, compare your personal and university campus score in leaderboards.'
+        ],
+        tools: [
+          'Ruby on Rails',
+          'PostgreSQL',
+          'JavaScript',
+          'Figma'
+        ]
+      },
       images: [
         {
           image: '/dish_screenshot_1.webp',
@@ -96,9 +128,20 @@ export function ProjectData() {
     },
     {
       title: 'Doppel',
-      content: `Doppel is an AirBnb clone where a user can hire a doppelganger to replace them at an event they don't want to attend.
-        Built with 2 team mates under a time crunch this app was a great way to begin live developing with Ruby on Rails.
-        Challenges included a live map with clickable pins and scheduling bookings between 2 users.`,
+      url: 'https://new-doppel.herokuapp.com/',
+      content: {
+        summary: `Doppel is an AirBnb clone where a user can hire a doppelganger to replace them at an event they don't want to attend.
+          Built with 2 team mates under a time crunch this app was a great way to begin live developing with Ruby on Rails.`,
+        features: [
+          'Live area map.',
+          'Inititate and track bookings.'
+        ],
+        tools: [
+          'Ruby on Rails',
+          'Figma',
+          'JavaScript',
+        ],
+      },
       images: [
         {
           image: '/doppel_screenshot_1.webp',
@@ -116,10 +159,26 @@ export function ProjectData() {
     },
     {
       title: 'Foragr',
-      content: `An app for the foraging community to share finds and learn more about local wild edibles.
-        This project was built with two team mates under a strict deadline to ensure the app was ready for a live demo.
-        Challenges included time management and including a functional map with clickable drop pins, and a web scraping feature
-        that could fill the app's index with local plant species.`,
+      url: 'https://foragr.herokuapp.com/',
+      content: {
+        summary: `An app for the foraging community to share finds and learn more about local wild edibles.
+          This project was built with two team mates under a strict deadline to ensure the app was ready for a live demo.
+          Challenges included time management and including a functional map with clickable drop pins, and a web scraping feature
+          that could fill the app's index with local plant species.`,
+        features: [
+          'Live area map with clickable pins.',
+          'Bookmark caches or species to save them.',
+          'Share finds with other users.',
+          'Species index sourced via web scraper.'
+        ],
+        tools: [
+          'Ruby on Rails',
+          'JavaScript',
+          'PostgreSQL',
+          'Figma',
+          'Bootstrap'
+        ]
+      },
       images: [
         {
           image: '/foragr_screenshot_1.webp',

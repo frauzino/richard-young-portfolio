@@ -27,6 +27,11 @@
 
 .link {
   position: relative;
+  transition: .3s;
+
+  &:hover {
+    letter-spacing: .25rem;
+  }
 
   &:hover:after {
     width: 100%;

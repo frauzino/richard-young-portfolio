@@ -2,43 +2,29 @@
 @import url('https://fonts.googleapis.com/css2?family=Encode+Sans:wght@100&family=Montserrat:wght@300&display=swap');
 
 :root {
-  --max-width: 1100px;
-  --border-radius: 12px;
-  --font-mono: ui-monospace, Menlo, Monaco, 'Cascadia Mono', 'Segoe UI Mono',
-    'Roboto Mono', 'Oxygen Mono', 'Ubuntu Monospace', 'Source Code Pro',
-    'Fira Mono', 'Droid Sans Mono', 'Courier New', monospace;
-  --font-default: 'Montserrat', sans-serif;
-  --font-headers: 'Encode Sans', sans-serif;
-
-  --font-color-default: #505050;
-  --font-color-alt: #ffeddf;
-  --text-shadow: 0px 0px 10px #513d3a82;
-  --text-shadow-alt: 0px 0.4px 1px #fdf4edb9;
-
-  --background-color: #fdf4ed;
-  --background-color-alt: #363635;
-
-  --dark-gray: #363635;
-  --viridian: #688D7D;
-  --moss-green: #465C53;
-  --shadow-gray: #b0b0b0bf;
-  --light-gray: #b0b0b0a3;
-  --medium-gray: #888888a3;
-  --indian-red: #B86A61;
-  --melon: #DEA59F;
-  --mountbatten-pink: #9D8189;
-
-  --card-shadow: 4px 4px 15px var(--shadow-gray);
-
-  --card-radius: 1rem;
-
-  /* retro colours */
+  /* colours */
 
   --off-white: #FFFAE8;
   --jet-black: #313339;
   --retro-red: #A23E48;
   --retro-blue: #6C8EAD;
   --retro-orange: #F18F01;
+
+  --max-width: 1100px;
+  --border-radius: 12px;
+  --font-mono: ui-monospace, Menlo, Monaco, 'Cascadia Mono', 'Segoe UI Mono',
+    'Roboto Mono', 'Oxygen Mono', 'Ubuntu Monospace', 'Source Code Pro',
+    'Fira Mono', 'Droid Sans Mono', 'Courier New', monospace;
+  /* --font-default: 'Montserrat', sans-serif; */
+  --font-default: 'Montserrat', sans-serif;
+  --font-headers: 'Montserrat', sans-serif;
+
+  --font-color-default: var(--jet-black);
+  --font-color-alt: var(--off-white);
+
+  --background-color: var(--off-white);
+  --background-color-alt: var(--jet-black);
+
 }
 
 * {
@@ -58,27 +44,17 @@ body {
 
 body {
   color: rgb(var(--font-color-default));
-  /* background: var(--background-color); */
   font-family: var(--font-default);
   font-size: 1.2rem;
+  font-weight: lighter;
   letter-spacing: .5px;
   line-height: 1.75rem;
-  overflow-x: hidden;
+  overflow: hidden;
 
   /* retro */
 
-  background: var(--off-white)
-}
-
-.backgroundTexture {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background-image: url('/paper_texture.jpg');
-  filter: sepia(30%);
-  z-index: -1;
+  background: var(--background-color);
+  /* background: var(--background-color-alt); */
 }
 
 .pageContainer {
@@ -93,7 +69,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 a {
-  color: inherit;
+  color: var(--jet-black);
   text-decoration: none;
 }
 
@@ -157,3 +133,176 @@ a {
     padding: 0;
   }
 }
+
+/* ---------- Fog ---------- */
+.fogwrapper {
+  height: 100%;
+  position: absolute;
+  top: 0;
+  width: 100%;
+  -webkit-filter: blur(1px) grayscale(0.1) saturate(1.2) sepia(0.2);
+  filter: blur(1px) grayscale(0.1) saturate(1.2) sepia(0.2);
+}
+
+#foglayer_01, #foglayer_02, #foglayer_03 {
+  height: 100%;
+  position: absolute;
+  width: 200%;
+  top: 0;
+  z-index: -10;
+}
+
+#foglayer_01 .image01, #foglayer_01 .image02,
+#foglayer_02 .image01, #foglayer_02 .image02,
+#foglayer_03 .image01, #foglayer_03 .image02 {
+  float: left;
+  height: 100%;
+  width: 50%;
+}
+
+#foglayer_01 {
+  -webkit-animation: foglayer_01_opacity 10s linear infinite, foglayer_moveme 15s linear infinite;
+  -moz-animation: foglayer_01_opacity 10s linear infinite, foglayer_moveme 15s linear infinite;
+  animation: foglayer_01_opacity 10s linear infinite, foglayer_moveme 15s linear infinite;
+}
+
+#foglayer_02, #foglayer_03 {
+  -webkit-animation: foglayer_02_opacity 21s linear infinite, foglayer_moveme 13s linear infinite;
+  -moz-animation: foglayer_02_opacity 21s linear infinite, foglayer_moveme 13s linear infinite;
+  animation: foglayer_02_opacity 21s linear infinite, foglayer_moveme 13s linear infinite;
+}
+
+/* ---------- Moving Fog ---------- */
+/*
+  'size: cover' || 'size: 100%'; results remain the same
+  'attachment: scroll' can be added or removed; results remain the same
+  'attachment: fixed' causing unexpected results in Chrome
+  'repeat-x' || 'no-repeat'; results remain the same
+*/
+#foglayer_01 .image01, #foglayer_01 .image02 {
+  background: url("https://raw.githubusercontent.com/danielstuart14/CSS_FOG_ANIMATION/master/fog1.png") center center/cover no-repeat transparent;
+}
+
+#foglayer_02 .image01, #foglayer_02 .image02,
+#foglayer_03 .image01, #foglayer_03 .image02{
+  background: url("https://raw.githubusercontent.com/danielstuart14/CSS_FOG_ANIMATION/master/fog2.png") center center/cover no-repeat transparent;
+}
+
+/* ---------- Keyframe Layer 1 ---------- */
+@-webkit-keyframes foglayer_01_opacity {
+  0% { opacity: .3; }
+  22% { opacity: .7; }
+  40% { opacity: .45; }
+  58% { opacity: .8; }
+  80% { opacity: .35 }
+  100% { opacity: .3; }
+}
+@-moz-keyframes foglayer_01_opacity {
+  0% { opacity: .3; }
+  22% { opacity: .7; }
+  40% { opacity: .45; }
+  58% { opacity: .8; }
+  80% { opacity: .35 }
+  100% { opacity: .3; }
+}
+@-o-keyframes foglayer_01_opacity {
+  0% { opacity: .3; }
+  22% { opacity: .7; }
+  40% { opacity: .45; }
+  58% { opacity: .8; }
+  80% { opacity: .35 }
+  100% { opacity: .3; }
+}
+@keyframes foglayer_01_opacity {
+  0% { opacity: .3; }
+  22% { opacity: .7; }
+  40% { opacity: .45; }
+  58% { opacity: .8; }
+  80% { opacity: .35 }
+  100% { opacity: .3; }
+}
+/* ---------- Keyframe Layer 2 ---------- */
+@-webkit-keyframes foglayer_02_opacity {
+  0% { opacity: .5; }
+  25% { opacity: .2; }
+  50% { opacity: .1; }
+  80% { opacity: .3; }
+  100% { opacity: .5; }
+}
+@-moz-keyframes foglayer_02_opacity {
+  0% { opacity: .5; }
+  25% { opacity: .2; }
+  50% { opacity: .1; }
+  80% { opacity: .3; }
+  100% { opacity: .5; }
+}
+@-o-keyframes foglayer_02_opacity {
+  0% { opacity: .5; }
+  25% { opacity: .2; }
+  50% { opacity: .1; }
+  80% { opacity: .3; }
+  100% { opacity: .5; }
+}
+@keyframes foglayer_02_opacity {
+  0% { opacity: .5; }
+  25% { opacity: .2; }
+  50% { opacity: .1; }
+  80% { opacity: .3; }
+  100% { opacity: .5; }
+}
+/* ---------- Keyframe Layer 3 ---------- */
+@-webkit-keyframes foglayer_03_opacity {
+  0% { opacity: .8 }
+  27% { opacity: .2; }
+  52% { opacity: .6; }
+  68% { opacity: .3; }
+  100% { opacity: .8; }
+}
+@-moz-keyframes foglayer_03_opacity {
+  0% { opacity: .8 }
+  27% { opacity: .2; }
+  52% { opacity: .6; }
+  68% { opacity: .3; }
+  100% { opacity: .8; }
+}
+@-o-keyframes foglayer_03_opacity {
+  0% { opacity: .8 }
+  27% { opacity: .2; }
+  52% { opacity: .6; }
+  68% { opacity: .3; }
+  100% { opacity: .8; }
+}
+@keyframes foglayer_03_opacity {
+  0% { opacity: .8; }
+  27% { opacity: .2; }
+  52% { opacity: .6; }
+  68% { opacity: .3; }
+  100% { opacity: .8; }
+}
+/* ---------- Keyframe moveMe ---------- */
+@-webkit-keyframes foglayer_moveme {
+  0% { left: 0; }
+  100% { left: -100%; }
+}
+@-moz-keyframes foglayer_moveme {
+  0% { left: 0; }
+  100% { left: -100%; }
+}
+@-o-keyframes foglayer_moveme {
+  0% { left: 0; }
+  100% { left: -100%; }
+}
+@keyframes foglayer_moveme {
+  0% { left: 0; }
+  100% { left: -100%; }
+}
+
+@media only screen
+  and (min-width: 280px)
+  and (max-width: 767px) {
+    #foglayer_01 .image01, #foglayer_01 .image02,
+    #foglayer_02 .image01, #foglayer_02 .image02,
+    #foglayer_03 .image01, #foglayer_03 .image02 {
+      width: 100%;
+    }
+  }

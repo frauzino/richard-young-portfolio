@@ -22,10 +22,12 @@ export default function AboutMe() {
       <div className={styles.aboutMeContainer}>
         <div className={styles.textContainer}>
           Hi, I'm Richard, a web developer based in Montreal, Canada.
-          I'm passionate about bringing exciting ideas to life and solving interesting problems through robust, maintanable code.
-          As an ex fine dining chef I bring a unique view and attitude to development, I'm comfortable working with tight deadlines while delivering an excellent product within budget.
+          I'm a full stack developer with a background in fine dining and pastry.
+          I approach any project with enthusiasm and an eye for detail.
+          I pride myself on writing clear, maintainable code using modular components, primarily in Ruby on Rails and React.js.
+          I'm also an avid gardener, with a collection of over 100 tropical houseplants and a small urban vegetable garden in the summer.
+          I appreciate taking on new, creative challenges where I can learn and continue to grow as a developer.
           <div className={styles.downloadWrapper}>
-            <h4 className={clsx(styles.link, rocketeers.className)} onClick={saveFile}>Download My CV</h4>
             <Image
               className='download-arrow'
               src='/download_arrow.svg'
@@ -33,6 +35,7 @@ export default function AboutMe() {
               width={35}
               height={35}
             />
+            <h3 className={clsx(styles.link, rocketeers.className)} onClick={saveFile}>Download My CV</h3>
           </div>
         </div>
         <div className={styles.skillsContainer}>
