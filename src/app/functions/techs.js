@@ -3,42 +3,42 @@ export default function Techs() {
   const techs = [
     {
       name: 'React.js',
-      src: '/react_logo.webp',
+      src: '/react_logo.svg',
       alt: 'React.js logo'
     },
     {
       name: 'Figma',
-      src: '/figma_logo.webp',
+      src: '/figma_logo.svg',
       alt: 'Figma logo'
     },
     {
       name: 'JavaScript',
-      src: '/javascript_logo.webp',
+      src: '/javascript_logo.svg',
       alt: 'JavaScript logo'
     },
     {
       name: 'Ruby on Rails',
-      src: '/ruby_on_rails_logo.webp',
+      src: '/ruby_on_rails_logo.svg',
       alt: 'Ruby on Rails logo'
     },
     {
       name: 'Shopify',
-      src: '/shopify_logo.webp',
+      src: '/shopify_logo.svg',
       alt: 'Shopify logo'
     },
     {
       name: 'Python',
-      src: '/python_logo.webp',
+      src: '/python_logo.svg',
       alt: 'Python logo'
     },
     {
       name: 'Django',
-      src: '/django_logo.webp',
+      src: '/django_logo.svg',
       alt: 'Django logo'
     },
     {
       name: 'CSS',
-      src: '/css3_logo.webp',
+      src: '/css3_logo.svg',
       alt: 'CSS logo'
     },
     {
