@@ -31,29 +31,11 @@ export function Slideshow(props) {
           alt={slide.imageAlt}
           width={1000}
           height={1000}
+          blurDataURL='data:...'
+          placeholder='blur'
           style={slide.imageFormat == 'mobile' ? {objectFit: 'contain'} : {objectFit: 'cover'}}
         />
       ))}
-      {/* <div className={styles.left_wrapper} onClick={prevSlide}>
-        <Image
-          className={styles.left}
-          loading='lazy'
-          src='/base_chevron_left.svg'
-          alt="Left chevron"
-          width={50}
-          height={50}
-        />
-      </div>
-      <div className={styles.right_wrapper} onClick={nextSlide}>
-      <Image
-          className={styles.left}
-          loading='lazy'
-          src='/base_chevron_right.svg'
-          alt="Right chevron"
-          width={50}
-          height={50}
-        />
-      </div> */}
     </div>
   )
 }
