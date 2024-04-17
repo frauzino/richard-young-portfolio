@@ -20,6 +20,7 @@
 .header {
 font-size: clamp(4rem, 8vw, 8rem);
 font-weight: lighter;
+z-index: 1;
 }
 
 .content {

@@ -49,7 +49,7 @@ body {
   font-weight: lighter;
   letter-spacing: .5px;
   line-height: 1.75rem;
-  overflow: hidden;
+  /* overflow: hidden; */
 
   /* retro */
 
@@ -83,6 +83,11 @@ a {
 
 .hidden {
   display: none;
+}
+
+.disabled {
+  color: #7d8290 !important;
+  pointer-events: none;
 }
 
 .svg {
@@ -142,6 +147,7 @@ a {
   width: 100%;
   -webkit-filter: blur(1px) grayscale(0.1) saturate(1.2) sepia(0.2);
   filter: blur(1px) grayscale(0.1) saturate(1.2) sepia(0.2);
+  z-index: -1;
 }
 
 #foglayer_01, #foglayer_02, #foglayer_03 {

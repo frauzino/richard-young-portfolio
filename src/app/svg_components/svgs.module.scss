@@ -140,7 +140,7 @@
 @media screen and (max-width: 749px) {
   // home page SVGs
   .wiggle {
-    transform: scale(80%) translateX(22vw) translateY(-35vh) rotateY(180deg);
+    transform: scale(80%) translateX(22vw) translateY(-45vh) rotateY(180deg);
     left: auto;
     right: 0
   }
@@ -166,13 +166,13 @@
   }
 
   .circle {
-    bottom: 40%;
+    bottom: 30%;
     right: auto;
     left: 50%;
   }
 
   .squaredWiggle {
-    bottom: 35%;
+    bottom: 20%;
     left: 0;
   }
 }

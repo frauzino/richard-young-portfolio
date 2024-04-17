@@ -58,6 +58,10 @@
   &:hover {
     letter-spacing: .25rem;
   }
+
+  &:active {
+    letter-spacing: normal;
+  }
 }
 
 .submitWrapper:after {

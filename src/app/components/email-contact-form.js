@@ -1,7 +1,7 @@
 'use client'
 
 import styles from "./email-contact-form.module.scss"
-import React, { useRef } from 'react';
+import React, { useRef, useState } from 'react';
 import emailjs from '@emailjs/browser';
 import localFont from 'next/font/local'
 import clsx from 'clsx'
@@ -10,14 +10,20 @@ const rocketeers = localFont({src: '../../../public/fonts/Rocketeers.otf'})
 
 export function EmailContactForm() {
 
+  const [emailSent, setEmailSent] = useState(false)
   const form = useRef();
 
   const sendEmail = (e) => {
     e.preventDefault(); // prevents the page from reloading when you hit “Send”
+    setEmailSent(true);
 
     emailjs.sendForm('service_hej0dne', 'template_329c318', form.current, 'Dvq8nJtPDNRQqoSMI')
       .then((result) => {
           // show the user a success message
+          form.current[0].value = '';
+          form.current[1].value = '';
+          form.current[2].value = ``;
+          form.current[3].value = `Sent!`;
       }, (error) => {
           // show the user an error
       });
@@ -57,9 +63,9 @@ export function EmailContactForm() {
             />
           </div>
         </div>
-      <div className={styles.submitWrapper}>
+      <div className={clsx(styles.submitWrapper, emailSent && 'disabled')}>
         <input
-          className={clsx(styles.email_form__submit, rocketeers.className)}
+          className={clsx(styles.email_form__submit, rocketeers.className, emailSent && 'disabled')}
           type="submit"
           value="Send"
         />
