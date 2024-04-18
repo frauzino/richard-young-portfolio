@@ -2,7 +2,7 @@
 
 import styles from './contact.module.scss'
 import { EmailContactForm } from '../components/email-contact-form'
-import { SocialIcons } from '../components/social_icons'
+// import { SocialIcons } from '../components/social_icons'
 
 export default function Contact() {
 
