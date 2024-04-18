@@ -30,7 +30,7 @@ export default function Contact() {
           <EmailContactForm />
         </div>
         <div className={styles.socialsContainer}>
-          <SocialIcons socials={socials}/>
+          {/* <SocialIcons socials={socials}/> */}
         </div>
       </div>
     </div>
