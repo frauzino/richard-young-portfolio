@@ -22,7 +22,7 @@ export function EmailContactForm() {
           // show the user a success message
           form.current[0].value = '';
           form.current[1].value = '';
-          form.current[2].value = ``;
+          form.current[2].value = '';
           form.current[3].value = `Sent!`;
       }, (error) => {
           // show the user an error
