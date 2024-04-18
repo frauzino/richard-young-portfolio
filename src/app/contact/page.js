@@ -1,8 +1,8 @@
-// 'use client'
+'use client'
 
 import styles from './contact.module.scss'
 import { EmailContactForm } from '../components/email-contact-form'
-// import { SocialIcons } from '../components/social_icons'
+import { SocialIcons } from '../components/social_icons'
 
 export default function Contact() {
 
@@ -30,7 +30,7 @@ export default function Contact() {
           <EmailContactForm />
         </div>
         <div className={styles.socialsContainer}>
-          {/* <SocialIcons socials={socials}/> */}
+          <SocialIcons socials={socials}/>
         </div>
       </div>
     </div>
