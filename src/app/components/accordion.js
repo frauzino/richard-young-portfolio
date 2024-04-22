@@ -25,7 +25,7 @@ export function Accordion({title, url, content, isActive, onClick}) {
                 ))}
             </ul>
           </div>
-          <Link href={url} className={styles.linkWrapper}>
+          <Link href={url} target='_blank' className={styles.linkWrapper}>
             <Image
               className='new-tab'
               src='/new_tab.svg'
