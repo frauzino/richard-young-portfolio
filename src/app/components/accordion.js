@@ -20,12 +20,12 @@ export function Accordion({title, url, content, isActive, onClick}) {
           <div className={styles.featuresContainer}>
             <h3 className={rocketeers.className}>Features</h3>
             <ul className={styles.features}>
-              {content.features.map((item, index) => (
+              {content.features?.map((item, index) => (
                 <li key={`tool-${index}`}>{item}</li>
                 ))}
             </ul>
           </div>
-          <Link href={url} target='_blank' className={styles.linkWrapper}>
+          <Link href={url} className={styles.linkWrapper}>
             <Image
               className='new-tab'
               src='/new_tab.svg'

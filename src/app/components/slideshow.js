@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useState, useEffect, useCallback } from 'react';
 import styles from './slideshow.module.scss'
 import Image from 'next/image'
 import clsx from 'clsx'
@@ -6,19 +6,37 @@ import clsx from 'clsx'
 export function Slideshow(props) {
   const slideImages = props.slideImages
 
-  const [currentIndex, setCurrentIndex] = useState(0);
-  const nextSlide = () => {
-    const newIndex = (currentIndex + 1) % slideImages.length;
-    setCurrentIndex(newIndex);
-  };
-  const prevSlide = () => {
-    const newIndex = currentIndex > 0 ? (currentIndex - 1) : slideImages.length - 1;
-    setCurrentIndex(newIndex);
-  };
 
-  setInterval(() => {
-    nextSlide()
-  }, 5000);
+  const [currentIndex, setCurrentIndex] = useState(0);
+  // const nextSlide = () => {
+  //   const newIndex = (currentIndex + 1) % slideImages.length;
+  //   setCurrentIndex(newIndex);
+  // };
+
+  const nextSlide = useCallback(() => {
+    setCurrentIndex((prevIndex) => {
+      return (prevIndex + 1) % slideImages.length
+    });
+  }, [slideImages.length]);
+
+  useEffect(() => {
+    const interval = setInterval(() => {
+      nextSlide();
+    }, 5000);
+
+    return () => {
+      clearInterval(interval);
+    };
+  }, [currentIndex, nextSlide]);
+
+  // const prevSlide = () => {
+  //   const newIndex = currentIndex > 0 ? (currentIndex - 1) : slideImages.length - 1;
+  //   setCurrentIndex(newIndex);
+  // };
+
+  // setInterval(() => {
+  //   nextSlide()
+  // }, 5000);
 
   return (
     <div className={styles.slideshow}>

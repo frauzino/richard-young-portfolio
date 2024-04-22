@@ -14,7 +14,6 @@ export function SocialIcons({socials}) {
             key={`social-${index}`}
             className={clsx(styles.icon_wrapper, 'tooltip')}
             href={social.url}
-            target='_blank'
           >
             <Image
               className={styles.icon}

@@ -41,7 +41,7 @@ export default function AboutMe() {
         <div className={styles.skillsContainer}>
           <h2 className={clsx(styles.sectionHeader, rocketeers.className)} >My Technical Skills</h2>
           <div className={styles.iconsContainer}>
-            {Techs().map((tech, index) => (
+            {Techs()?.map((tech, index) => (
               <div key={`tech-${index}`} className={clsx(styles.icon_wrapper, 'tooltip')}>
                 <Image
                   className={clsx(styles.icon)}

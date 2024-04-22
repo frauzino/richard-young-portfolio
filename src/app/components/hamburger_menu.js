@@ -35,7 +35,7 @@ export function HamburgerMenu({ navItems }) {
             <Logo />
           </div>
           <ul className={clsx(styles.navLinks, menuState && styles.active)}>
-            {navItems.map((item, index) => (
+            {navItems?.map((item, index) => (
               <li key={`navlink-${index}`} className={styles.nav_link}>
                 <Link href={`/${item !== 'home' && item}`} className={clsx(styles.link, rocketeers.className)} onClick={() => toggleMenu()} >{item.replace('_', ' ')}</Link>
               </li>

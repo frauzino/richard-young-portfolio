@@ -18,14 +18,15 @@ export function EmailContactForm() {
     setEmailSent(true);
 
     emailjs.sendForm('service_hej0dne', 'template_329c318', form.current, 'Dvq8nJtPDNRQqoSMI')
-      .then((result) => {
+      .then(() => {
           // show the user a success message
           form.current[0].value = '';
           form.current[1].value = '';
           form.current[2].value = '';
-          form.current[3].value = `Sent!`;
+          form.current[3].value = 'Sent!';
       }, (error) => {
           // show the user an error
+          console.error(error)
       });
   };
 

@@ -21,8 +21,6 @@ export function Navbar({ navItems}) {
         </div>
       }
       <h2 className={clsx(styles.navbar__header, rocketeers.className)}>{header}</h2>
-      {/* <div className={styles.navbar__header_wrapper}>
-      </div> */}
       <HamburgerMenu navItems={navItems}/>
     </div>
   )

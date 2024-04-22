@@ -29,13 +29,13 @@ export default function Projects() {
               <LWiggle />
               <SquaredWiggle />
             </div>
-          {ProjectData().map((project, index) => (
+          {ProjectData()?.map((project, index) => (
             index === activeIndex &&
             <div key={`images-project-${index}`} className={styles.slideshowWrapper}>
               <Slideshow slideImages={project.images}/>
               <div className={styles.toolsContainer}>
                 <ul className={styles.tools}>
-                  {project.content.tools.map((item, index) => (
+                  {project.content.tools?.map((item, index) => (
                     <li key={`tool-${index}`} className={rocketeers.className}>
                       {`${item}${index != project.content.tools.length - 1 ? ' |' : ''}`}
                     </li>
@@ -46,7 +46,7 @@ export default function Projects() {
           ))}
         </div>
         <div className={styles.accordionContainer}>
-          {ProjectData().map((project, index) => (
+          {ProjectData()?.map((project, index) => (
             <Accordion
               key={`project-${index}`}
               title={project.title}
