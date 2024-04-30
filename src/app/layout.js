@@ -1,6 +1,5 @@
 import './globals.css'
 import { Navbar } from './components/navbar'
-import logo from '../../public/logo.svg'
 
 export const metadata = {
   title: 'Richard Young',
@@ -10,7 +9,7 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
-      <body>
+      <body className='dark'>
         {children}
         <Navbar
           navItems={[
