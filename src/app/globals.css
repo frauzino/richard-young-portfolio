@@ -138,9 +138,9 @@ a {
   }
 }
 
-@media (prefers-color-scheme: dark) {
+/* @media (prefers-color-scheme: dark) {
   body {
     background: var(--background-color-alt);
     color: var(--font-color-alt);
   }
-}
+} */
