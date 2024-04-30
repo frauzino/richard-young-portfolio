@@ -49,7 +49,6 @@ body {
   font-weight: lighter;
   letter-spacing: .5px;
   line-height: 1.75rem;
-  /* overflow: hidden; */
 
   /* retro */
 
@@ -136,5 +135,12 @@ a {
   .pageContainer {
     margin-top: 8rem;
     padding: 0;
+  }
+}
+
+@media (prefers-color-scheme: dark) {
+  body {
+    background: var(--background-color-alt);
+    color: var(--font-color-alt);
   }
 }
