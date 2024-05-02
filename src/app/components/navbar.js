@@ -2,6 +2,7 @@
 
 import styles from "./navbar.module.scss";
 import { HamburgerMenu } from "./hamburger_menu";
+import { DarkModeToggle } from "./dark_mode_toggle";
 import { usePathname } from "next/navigation";
 import clsx from 'clsx';
 import localFont from 'next/font/local';
@@ -21,7 +22,10 @@ export function Navbar({ navItems}) {
         </div>
       }
       <h2 className={clsx(styles.navbar__header, rocketeers.className)}>{header}</h2>
-      <HamburgerMenu navItems={navItems}/>
+      <div className={styles.navbarIconsWrapper}>
+        <DarkModeToggle />
+        <HamburgerMenu navItems={navItems}/>
+      </div>
     </div>
   )
 }

@@ -20,7 +20,7 @@
   --font-headers: 'Montserrat', sans-serif;
 
   --font-color-default: var(--jet-black);
-  --font-color-alt: var(--off-white);
+  --font-color-alt: #e5e3dc;
 
   --background-color: var(--off-white);
   --background-color-alt: var(--jet-black);
@@ -40,10 +40,11 @@ html {
 html,
 body {
   max-width: 100vw;
+  transition: .3s;
 }
 
 body {
-  color: rgb(var(--font-color-default));
+  color: var(--font-color-default);
   font-family: var(--font-default);
   font-size: 1.2rem;
   font-weight: lighter;
@@ -138,9 +139,38 @@ a {
   }
 }
 
-/* @media (prefers-color-scheme: dark) {
-  body {
-    background: var(--background-color-alt);
-    color: var(--font-color-alt);
-  }
-} */
+#circle-mask-2 {
+  stroke: black;
+}
+
+body.dark {
+  background: var(--background-color-alt);
+  color: var(--font-color-alt);
+}
+
+body.dark h1,
+body.dark h2,
+body.dark h3,
+body.dark h4,
+body.dark h5,
+body.dark h6,
+body.dark .unassigned-text {
+  color: var(--font-color-alt);
+}
+
+body.dark .icon {
+  filter: brightness(0) saturate(100%) invert(97%) sepia(76%) saturate(458%) hue-rotate(300deg) brightness(100%) contrast(117%);
+}
+
+body.dark .social-icon {
+  filter: brightness(0) saturate(100%) invert(99%) sepia(4%) saturate(1361%) hue-rotate(207deg) brightness(108%) contrast(94%);
+}
+
+body.dark .tooltip-text {
+  background-color: var(--font-color-alt);
+  color: var(--jet-black);
+}
+
+body.dark .tooltip-text:after {
+  border-color: transparent transparent var(--font-color-alt) transparent;
+}

@@ -50,3 +50,9 @@
 .ham8.active .bottom {
   stroke-dashoffset: -64px;
 }
+
+@media screen and (max-width: 1024px){
+  .ham {
+    width: 50px;
+  }
+}

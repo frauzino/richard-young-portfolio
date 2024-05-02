@@ -16,7 +16,7 @@ export function SocialIcons({socials}) {
             href={social.url}
           >
             <Image
-              className={styles.icon}
+              className={clsx('social-icon', styles.icon)}
               src={social.icon}
               alt={`Richard Young's ${social.app}`}
               width={60}
