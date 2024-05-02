@@ -29,7 +29,7 @@ export default function AboutMe() {
           I appreciate taking on new, creative challenges where I can learn and continue to grow as a developer.`}
           <div className={styles.downloadWrapper}>
             <Image
-              className='download-arrow'
+              className='icon download-arrow'
               src='/download_arrow.svg'
               alt='download icon'
               width={35}

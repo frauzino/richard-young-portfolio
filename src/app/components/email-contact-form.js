@@ -66,7 +66,7 @@ export function EmailContactForm() {
         </div>
       <div className={clsx(styles.submitWrapper, emailSent && 'disabled')}>
         <input
-          className={clsx(styles.email_form__submit, rocketeers.className, emailSent && 'disabled')}
+          className={clsx('unassigned-text', styles.email_form__submit, rocketeers.className, emailSent && 'disabled')}
           type="submit"
           value="Send"
         />
