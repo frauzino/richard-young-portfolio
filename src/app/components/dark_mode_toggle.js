@@ -1,29 +1,12 @@
-import styles from './toggle.module.scss';
-import { useEffect, useState } from 'react';
 import { DarkModeSwitch } from 'react-toggle-dark-mode';
-import { useMediaQuery } from "react-responsive";
+import { useColorScheme } from '../functions/useColorScheme';
 
 export function DarkModeToggle() {
-  const [isDarkMode, setDarkMode] = useState(false);
+  const {isDarkMode, setIsDarkMode} = useColorScheme();
 
   const toggleDarkMode = () => {
-    setDarkMode(!isDarkMode);
+    setIsDarkMode(!isDarkMode);
   };
-
-  useEffect(() => {
-    if (isDarkMode) {
-      document.body.classList.add('dark');
-    } else {
-      document.body.classList.remove('dark');
-    }
-  }, [isDarkMode]);
-
-  const systemPrefersDark = useMediaQuery({
-    query: '(prefers-color-scheme: dark)'
-  },
-    undefined,
-    (isSystemDark) => toggleDarkMode(isSystemDark)
-  );
 
   return (
     <DarkModeSwitch
