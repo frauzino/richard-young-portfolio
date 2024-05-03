@@ -19,6 +19,13 @@ export const metadata = {
         alt: 'Richard Young Portfolio'
       }
     ]
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'Richard Young',
+    description: 'Portfolio for web developer, Richard Young',
+    creator: '@RichardYou49157',
+    images: ['../../public/homepage_screenshot.png']
   }
 }
 
