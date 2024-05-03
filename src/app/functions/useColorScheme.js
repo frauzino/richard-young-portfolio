@@ -1,11 +1,9 @@
-import { useEffect, useMemo } from "react";
+import { useEffect, useMemo, useState } from "react";
 import { useMediaQuery } from "react-responsive";
-import createPersistedState from '@plq/use-persisted-state'
-import storage from '@plq/use-persisted-state/lib/storages/local-storage'
-
-const [useColorSchemeState] = createPersistedState("colorScheme", storage);
 
 export function useColorScheme() {
+  const isClient = typeof window !== "undefined";
+
   const systemPrefersDark = useMediaQuery(
     {
       query: "(prefers-color-scheme: dark)",
@@ -13,7 +11,17 @@ export function useColorScheme() {
     undefined
   );
 
-  const [isDarkMode, setIsDarkMode] = useColorSchemeState('isDarkMode', false);
+  const initialColorScheme = isClient ? localStorage.getItem("color-scheme") : null;
+  const defaultIsDarkMode = initialColorScheme !== null ? initialColorScheme === "dark" : systemPrefersDark;
+
+  const [isDarkMode, setIsDarkMode] = useState(defaultIsDarkMode);
+
+  useEffect(() => {
+    if (isClient) {
+      localStorage.setItem("color-scheme", isDarkMode ? "dark" : "light");
+    }
+  }, [isDarkMode]);
+
   const value = useMemo(
     () => (isDarkMode === undefined ? !!systemPrefersDark : isDarkMode),
     [isDarkMode, systemPrefersDark]

@@ -1,3 +1,5 @@
+'use client'
+
 import { DarkModeSwitch } from 'react-toggle-dark-mode';
 import { useColorScheme } from '../functions/useColorScheme';
 
