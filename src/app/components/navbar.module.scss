@@ -41,11 +41,7 @@
   .navbar {
     padding: 1rem 1rem 0;
   }
-  .navbarIconsWrapper {
-    gap: 1rem;
-
-    > svg {
-      width: 25px;
-    }
+  .navbarIconsWrapper > svg {
+    width: 25px;
   }
 }
