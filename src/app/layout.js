@@ -5,15 +5,22 @@ export const metadata = {
   title: 'Richard Young',
   description: 'Portfolio for web developer, Richard Young',
   type: 'website',
-  author: 'Richard Young',
+  authors: [
+    {
+      name: 'Richard Young',
+      url: 'http://richardyoungdev.com/'
+    }
+  ],
   openGraph: {
     title: 'Richard Young',
     description: 'Portfolio for web developer, Richard Young',
     url: 'http://richardyoungdev.com/',
     siteName: 'Richard Young Portfolio',
+    type: 'website',
+    author: 'Richard Young',
     images: [
       {
-        url: '../../public/homepage_screenshot.png',
+        url: 'http://richardyoungdev.com/homepage_screenshot.png',
         width: 1200,
         height: 630,
         alt: 'Richard Young Portfolio'
@@ -25,7 +32,7 @@ export const metadata = {
     title: 'Richard Young',
     description: 'Portfolio for web developer, Richard Young',
     creator: '@RichardYou49157',
-    images: ['../../public/homepage_screenshot.png']
+    images: ['http://richardyoungdev.com/homepage_screenshot.png']
   }
 }
 
