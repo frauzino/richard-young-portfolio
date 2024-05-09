@@ -1,0 +1,7 @@
+.toggleWrapper {
+  transition: .2s;
+
+  &:hover {
+    transform: scale(110%);
+  }
+}
