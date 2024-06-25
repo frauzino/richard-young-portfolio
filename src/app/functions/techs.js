@@ -70,6 +70,16 @@ export default function Techs() {
       name: 'Git',
       src: '/git_logo.svg',
       alt: 'Git logo'
+    },
+    {
+      name: 'Rspec',
+      src: '/rspec_logo.svg',
+      alt: 'Rspec logo'
+    },
+    {
+      name: 'Jest',
+      src: '/jest_logo.svg',
+      alt: 'Jest logo'
     }
   ]
 
